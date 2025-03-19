@@ -1,0 +1,20 @@
+Flowchart => Flowchart are diagram to represent solutions of problems. It's divide problems into smaller part and then arrange in logical way. This is called flowchart.
+
+Pseudocode => Pseudocode are text-based representation of the solution to problem. It's divide problem into smaller part and then arrange in logical way.This is called Pseudocode.
+
+Flowchart Component => Flowchart component are shape that represent different types of actions or steps in a process.
+There are many flowchart component like:-
+
+1. Terminator(Start/Exit) - Oval shape
+2. Input/Output - Parallelogram shape
+3. Process - Rectangle shape
+4. Decision - Diamond shape
+5. Arrow - Arrow shape
+
+PRACTICE QUESTION (Create Flowchart & Write Pseudocode)
+
+1. Sum of 2 number
+2. Calculate simple interest
+3. Find max of 3 number
+4. Find if number is prime or not
+5. Sum of first n natural number
