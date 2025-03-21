@@ -1,0 +1,57 @@
+4. DATATYPES IN JAVA
+Java is typed language we have to tell the type of data before creating variables.
+
+There are two types of datatypes.
+a. Primitive
+    byte => Range(-128 to 127)
+    short => Range(-32768 to 32767)
+    char => Range(1)
+    boolean => (True/False)
+    int => Range(−2,147,483,648 to 2,147,483,647)
+    long => Range(−9,223,372,036,854,775,808 to 9,223,372,036,854,775,807)
+    float => Range(3.1425163)
+    double => Range(3.1425163654859652)
+
+b. Non-Primitive
+    String
+    Array
+    Class
+    Object
+    Interface
+
+SIZE OF DATATYPES
+1 Byte = 8 Bits
+
+    byte => 1 Byte & 8 Bits
+    short => 2 Bytes & 16 Bits
+    char => 2 Bytes & 16 Bits
+    boolean => 1 Byte & ~1 Bits
+    int => 4 Bytes & 32 Bits
+    long => 8 Bytes & 64 Bits
+    float => 4 Bytes & 32 Bits
+    double => 8 Bytes & 64 Bits
+
+6. TYPE CONVERSION / WIDENING CONVERSION
+
+Type conversion is java refers to converting one datatype into another.
+When this two condition is True:-
+
+a. Type Compatible(Interchangeable)
+    Example in JavaBasics file 6.1
+
+b. Destination type > Source type 
+    Example in JavaBasics file 6.2
+
+7. TYPE CASTING / NARROWING CONVERSION
+
+When converting a larger type into smaller type, java does not perform the conversion automatically we must manually cast the type using type casting
+
+    Example in JavaBasics file 7.1
+
+8. TYPE PROMOTION IN EXPRESSION
+
+a. Java automatically promotes each byte, short or char operand to int when evaluating an expression
+    Example in JavaBasics file 8.1
+
+b. If one operand is long, float or double the whole expression id promoted to long, float or double respectfully.
+    Example in JavaBasics file 8.2
