@@ -1,3 +1,12 @@
+2.1 OUTPUT STEP
+
+Step 1 Write code of 2
+Step 2 Open terminal (Ctrl + `)
+Step 3 Go to folder
+Step 4 javac JavaBasics.java (Enter only in starting)
+Step 5 java JavaBasics.java (Enter)
+Step 6 Done
+
 4. DATATYPES IN JAVA
 Java is typed language we have to tell the type of data before creating variables.
 
