@@ -198,3 +198,267 @@ public class JavaBasics {
         
     }
 }
+
+// 9. Operators in Java
+
+//Arithmetic Binary Operators
+
+// a. Addition (+)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 5;
+        System.out.print("Addition =" + (a + b));
+    }
+}
+
+// b. Subtraction (-)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 5;
+        System.out.print("Subtraction =" + (a - b));
+    }
+}
+
+// c. Multiplication (*)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 5;
+        System.out.print("Multiplication =" + (a * b));
+    }
+}
+
+// d. Division (/)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 5;
+        System.out.print("Division =" + (a / b));
+    }
+}
+
+// e. Modulus (%))
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 5;
+        System.out.print("Modulus =" + (a % b));
+    }
+}
+
+//Arithmetic Unary Operators
+
+// a. Increment (++)
+// Post Increment
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        System.out.println("Post Increment = " + (a++));
+        System.out.println("Post Increment = " + (a++));
+    }
+}
+
+
+// Pre Increment
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        System.out.println("Pre Increment = " + (++a));
+        System.out.println("Pre Increment = " + (++a));
+    }
+}
+
+
+// b. Decrement (--)
+// Post Decrement
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        System.out.println("Post Decrement = " + (a--));
+        System.out.println("Post Decrement = " + (a--));
+    }
+}
+
+// Pre Decrement
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        System.out.println("Pre Decrement = " + (--a));
+        System.out.println("Pre Decrement = " + (--a));
+    }
+}
+
+
+// Relational Operators (Aka Comparison Operators)
+
+// Equal to (==)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 20;
+        int b = 30;
+        System.out.print("A is equal to B ? " + (a == b));
+    }
+}
+
+// Not Equal to (!=)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 20;
+        int b = 30;
+        System.out.print("A is not equal to B ? " + (a != b));
+    }
+}
+
+// Greater than (>)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 20;
+        int b = 30;
+        System.out.print("A is greater than B ? " + (a > b));
+    }
+}
+
+// Greater than equal to (>=)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 20;
+        int b = 30;
+        System.out.print("A is greater than equal to B ? " + (a >= b));
+    }
+}
+
+// Less than (<)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 20;
+        int b = 30;
+        System.out.print("A is less than B ? " + (a < b));
+    }
+}
+
+// Less than equal to (<=)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 20;
+        int b = 30;
+        System.out.print("A is less than equal to B ? " + (a <= b));
+    }
+}
+
+// Logical Operators
+
+// Logical AND (&&)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 2;
+        boolean cond1 = (a > b); //true
+        boolean cond2 = (a % b == 0); //true
+        System.out.print((cond1) && (cond2));
+    }
+}
+
+// Logical OR (||)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 8;
+        boolean cond1 = (a > b); //true
+        boolean cond2 = (a % b == 0); //false
+        System.out.print((cond1) || (cond2));
+    }
+}
+
+// Logical NOT (!)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 2;
+        boolean cond1 = (a > b); //true
+        boolean cond2 = (a % b == 0); //true
+        System.out.print(!(cond1) && (cond2)); 
+    }
+}
+
+// Assignment Operators
+
+// Simple Assignment (=)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 3;
+        System.out.print((a , b));
+    }
+}
+
+// Add and assign (+=)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 3;
+        System.out.print((a += b));
+    }
+}
+
+// Subtract and assign (-=)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 3;
+        System.out.print((a -= b));
+    }
+}
+
+// Multiply and assign (*=)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 3;
+        System.out.print((a *= b));
+    }
+}
+
+// Divide and assign (/=)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 3;
+        System.out.print((a /= b));
+    }
+}
+
+// Modulus and assign (%=)
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 3;
+        System.out.print((a %= b));
+    }
+}
+
