@@ -1,7 +1,9 @@
-//Practicing Java in this file 
+//Practicing java in this file
+
+import java.util.*;
 
 public class JavaPractice {
     public static void main(String args[]) {
-        System.out.print("Hello World");
+        
     }
 }

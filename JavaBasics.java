@@ -462,3 +462,134 @@ public class JavaBasics {
     }
 }
 
+// 10. Conditional Statements
+
+// a. if-else
+
+import java.util.*;
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        int age = sc.nextInt();
+
+        if(age >= 18) {
+            System.out.print("You can vote");
+        } else {
+            System.out.print("You can't vote");
+        }
+
+    }
+}
+
+// b. else-if 
+
+import java.util.*;
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        int age = sc.nextInt();
+
+        if(age < 18) {
+            System.out.print("You are Teenager");
+        } 
+        else if (age >= 18 && age <= 60){
+            System.out.print("You are Adult");
+        } 
+        else {
+            System.out.print("You are Senior Citizen");
+        }
+
+    }
+}
+
+// c. Ternary Operators
+
+import java.util.*;
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int marks = sc.nextInt();
+        String result = (marks >= 33) ? "Pass in this subject" : "Fail in this subject";
+        System.out.print(result);
+
+    }
+}
+
+// d. switch statement
+/*
+A switch statement is used to excecute one block of code out of many options, based on the value of variable
+*/
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        int day = 5;
+
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+        }
+    }
+}
+
+
+//Practice Problem for Switch
+//Create calculator using Binary operators
+
+//Solution
+
+import java.util.*;
+
+public class JavaPractice {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        char operator = sc.next().charAt(0);
+
+        switch(operator){
+            case '+' :
+                System.out.println("Sum of a + b is " + (a+b));
+                break;
+            case '-' :
+                System.out.println("Sub of a - b is " + (a-b));
+                break;
+            case '*' :
+                System.out.println("Mul of a * b is " + (a*b));
+                break;
+            case '/' :
+                System.out.println("Div of a / b is " + (a/b));
+                break;
+            case '%' :
+                System.out.println("Mod of a % b is " + (a%b));
+                break;
+            default :
+                System.out.println("Use only Binary Arithmetic Operators");
+        }
+    }
+}
