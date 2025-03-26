@@ -593,3 +593,187 @@ public class JavaPractice {
         }
     }
 }
+
+// 11. Loops (Flow Control)
+// a. While Loop
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int counter = 0;
+        while(counter < 10){
+            System.out.println("Hello World");
+            counter++;
+        }
+
+        System.out.println("Printed Hello World 10 Times");
+    }
+}
+
+// b. For Loop
+
+public class JavaBasics {
+    public static void main(String args[]) {
+       for(int i = 0; i < 10; i++){
+        System.out.println("Hello World");
+       }
+    }
+}
+
+// Print a reverse no
+// Using while loop
+
+public class JavaBasics {
+    public static void main(String args[]) {
+       
+       int n = 99801;
+       while(n > 0){
+        int lastDigit = n%10;
+        System.out.print(lastDigit);
+        n = n / 10;
+        
+       }
+    }
+}
+
+// Using for loop
+
+public class JavaBasics {
+    public static void main(String args[]) {
+       
+      for(int n = 99801; n > 0; n/=10){
+        int lastDigit = n%10;
+        System.out.print(lastDigit);
+      }
+
+    }
+}
+
+// Now create new varible with reverse number
+
+public class JavaBasics {
+    public static void main(String args[]) {
+       
+        int n = 10899;
+        int reverse = 0;
+        while(n > 0){
+            int lastDigit = n%10;
+            reverse = (reverse * 10) + lastDigit;
+            n/=10;
+        }
+
+        System.out.print(reverse);
+        
+    }
+}
+
+// c. Do While Loop
+
+public class JavaBasics {
+    public static void main(String args[]) {
+       
+    int counter = 0;
+    do{
+        System.out.println("Hello World");
+        counter++;
+    } while(counter < 10);
+
+    }
+}
+
+// d. Break statement
+
+public class JavaBasics {
+    public static void main(String args[]) {
+       
+    for(int i = 0; i < 5; i++){
+        if(i == 3){
+            break;
+        }
+        System.out.println(i);
+    }
+
+        System.out.print("Exit loop when condition met");
+
+    }
+}
+
+// e. Continue statement
+
+public class JavaBasics {
+    public static void main(String args[]) {  
+
+       for(int i=1; i<=5; i++){
+        if(i == 3){
+            continue;
+        }
+        System.out.println(i);
+
+       }
+    }
+}
+
+// Check if number is prime or not
+
+// 1. if i <= Math.sqrt(n)
+
+import java.util.*;
+
+public class JavaBasics {
+    public static void main(String args[]) {  
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        if(n == 2){
+            System.out.print("Prime Number");
+        } 
+        else{
+            boolean isPrime = true;
+            for(int i=2; i<=Math.sqrt(n); i++){
+                if(n%i == 0){
+                    isPrime = false;
+                }
+            }
+
+            if(isPrime == true){
+                System.out.print("Is Prime Number");
+            }
+            else{
+                System.out.print("Is Not Prime Number");
+            }
+        }
+        
+
+    }
+}
+
+// 2. if i <= n-1
+
+import java.util.*;
+
+public class JavaBasics {
+    public static void main(String args[]) {  
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        if(n == 2){
+            System.out.print("Prime Number");
+        } 
+        else{
+            boolean isPrime = true;
+            for(int i=2; i<=n-1; i++){
+                if(n%i == 0){
+                    isPrime = false;
+                }
+            }
+
+            if(isPrime == true){
+                System.out.print("Is Prime Number");
+            }
+            else{
+                System.out.print("Is Not Prime Number");
+            }
+        }
+        
+
+    }
+}
