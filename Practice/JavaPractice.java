@@ -113,16 +113,56 @@ import java.util.*;
 //     }
 // }
 
-public class JavaPractice {
-    public static void main(String args[]) {
+// public class JavaPractice {
+//     public static void main(String args[]) {
 
-    int n = 4;
-    for(int line = 1; line <= n; line++){
-        for(int num = 1; num <= line; num++){
-            System.out.print(num + " ");
-        }
-        System.out.println();
-    }
+//     int n = 4;
+//     for(int line = 1; line <= n; line++){
+//         for(int num = 1; num <= line; num++){
+//             System.out.print(num + " ");
+//         }
+//         System.out.println();
+//     }
 
-    }
-}
+//     }
+// }
+
+// public class JavaPractice {
+//     public static void main(String args[]) {
+
+//     int n = 4;
+//     for(int line = 1; line <= n; line++){
+//         for(int num = 4; num <= line; num++){
+//             System.out.print(num + " ");
+//         }
+//         System.out.println();
+//     }
+
+//     }
+// }
+
+
+// public class JavaPractice {
+//     public static void main(String args[]) {
+//         int a = 65;
+//         char ch = (char) a;
+//         System.out.print(a);
+//     }
+// }
+
+// public class JavaPractice {
+//     public static void main(String args[]) {
+       
+//        int n = 4;
+//        char ch = 'A';
+//        for(int line = 1; line <= n; line++){
+//             for(int chars = 1; chars <= line; chars++){
+//                 System.out.print(ch + " ");
+//                 ch++;
+//             }
+//             System.out.println();
+//        }
+
+//     }
+// }
+
