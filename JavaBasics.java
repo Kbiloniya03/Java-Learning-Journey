@@ -699,18 +699,18 @@ public class JavaBasics {
 
 // e. Continue statement
 
-public class JavaBasics {
-    public static void main(String args[]) {  
+    public class JavaBasics {
+        public static void main(String args[]) {  
 
-       for(int i=1; i<=5; i++){
-        if(i == 3){
-            continue;
+        for(int i=1; i<=5; i++){
+            if(i == 3){
+                continue;
+            }
+            System.out.println(i);
+
         }
-        System.out.println(i);
-
-       }
+        }
     }
-}
 
 // Check if number is prime or not
 
@@ -774,6 +774,78 @@ public class JavaBasics {
             }
         }
         
+
+    }
+}
+
+// PRACTICE PROBLEMS NESTED LOOPS
+// PRINT STAR PATTERNS
+/*
+
+*
+**
+***
+****
+
+*/
+
+public class JavaBasics {
+    public static void main(String args[]) {
+
+        for(int lines = 1; lines <= 4; lines++){
+            for(int star = 1; star <= lines; star++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+
+// INVERTED STAR PATTERNS
+/*
+
+****
+***
+**
+*
+
+*/
+
+public class JavaBasics {
+    public static void main(String args[]) {
+
+        int n = 4;
+        for(int lines = 1; lines <= n; lines++){
+            for(int star = n; star >= lines; star--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+// PRINT HALF-PYRAMID PATTERN
+
+/*
+1
+1 2
+1 2 3 
+1 2 3 4
+*/
+
+public class JavaBasics {
+    public static void main(String args[]) {
+
+    int n = 4;
+    for(int line = 1; line <= n; line++){
+        for(int num = 1; num <= line; num++){
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
 
     }
 }
