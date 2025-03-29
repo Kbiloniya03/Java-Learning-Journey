@@ -1050,3 +1050,27 @@ public class JavaBasics{
 
 // 8. HOLLOW ROMBUS PATTERN
 
+public class JavaPractice {
+    public static void main(String args[]) {
+       
+        int rows = 5;      // number of rows
+        int columns = 5;   // number of columns
+        for (int currentRow = 1; currentRow <= rows; currentRow++) {
+            for (int space = 1; space <= rows - currentRow; space++) {
+                System.out.print(" ");
+            }
+            for (int currentColumn = 1; currentColumn <= columns; currentColumn++) {
+                if (currentRow == 1 || currentColumn == 1 || currentRow == rows || currentColumn == columns) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            
+            System.out.println();
+        }
+        
+    }
+}
+
+// 9. 
