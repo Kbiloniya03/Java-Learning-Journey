@@ -239,20 +239,43 @@ import java.util.*;
 //     }
 // }
 
+// public class JavaPractice{
+//     public static void main(String args[]){
+       
+//        int rows = 4;
+//        for(int line = 1; line <= rows; line++){
+//             for(int space = 1; space <= rows - line; space++){
+//                 System.out.print(" ");
+//             }
+//             for(int star = 1; star <= line; star++){
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//        }
+       
+
+//     }
+// }
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+       
+//         int rows = 5;
+//         for(int line = 1; line <= rows; line++){
+//             for(int num = 1; num <= rows - line + 1; num++){
+//                 System.out.print(num + " ");
+//             }
+//             System.out.println();
+//         }
+
+//     }
+// }
+
 public class JavaPractice{
     public static void main(String args[]){
        
-       int rows = 4;
-       for(int line = 1; line <= rows; line++){
-            for(int space = 1; space <= rows - line; space++){
-                System.out.print(" ");
-            }
-            for(int star = 1; star <= line; star++){
-                System.out.print("*");
-            }
-            System.out.println();
-       }
-       
+        int rows = 5;
+        
 
     }
 }

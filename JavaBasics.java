@@ -952,3 +952,19 @@ public class JavaBasics{
 
     }
 }
+
+// 4. INVERTED HALF-PYRAMID WITH NUMBER PATTERN
+
+public class JavaBasics{
+    public static void main(String args[]){
+       
+        int rows = 5;
+        for(int line = 1; line <= rows; line++){
+            for(int num = 1; num <= rows - line + 1; num++){
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+
+    }
+}
