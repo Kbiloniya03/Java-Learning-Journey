@@ -857,6 +857,19 @@ public class JavaBasics {
 1
 */
 
+public class JavaBasics{
+    public static void main(String args[]) {
+        int n = 4;
+        for(int line = n; line >= 1; line--){
+            for(int num = 1; num <= line; num++){
+                System.out.print(num + " ");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
 
 
 // PRINT CHARACTER PATTERN
@@ -880,6 +893,62 @@ public class JavaBasics {
             }
             System.out.println();
        }
+
+    }
+}
+
+// PRACTICE PROBLEMS
+// 1. FLOYD'S TRIANGEL PATTERN
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int n = 5;
+        int num = 1;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(num + " ");
+                num++;
+            }
+            System.out.println();
+        }
+    }
+}
+
+// 2. PYRAMID PATTERN
+
+public class JavaBasics{
+    public static void main(String args[]){
+       
+       int rows = 8;
+       for(int line = 1; line <= rows; line++){
+            for(int space = 1; space <= rows - line; space++){
+                System.out.print(" ");
+            }
+            for(int star = 1; star <= (2*line - 1); star++){
+                System.out.print("*");
+            }
+            System.out.println();
+       }
+
+    }
+}
+
+// 3. INVERTED & ROTATED HALF-PYRAMID PATTERN
+
+public class JavaBasics{
+    public static void main(String args[]){
+       
+       int rows = 4;
+       for(int line = 1; line <= rows; line++){
+            for(int space = 1; space <= rows - line; space++){
+                System.out.print(" ");
+            }
+            for(int star = 1; star <= line; star++){
+                System.out.print("*");
+            }
+            System.out.println();
+       }
+       
 
     }
 }

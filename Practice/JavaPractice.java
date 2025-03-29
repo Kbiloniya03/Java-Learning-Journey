@@ -166,3 +166,93 @@ import java.util.*;
 //     }
 // }
 
+// public class JavaPractice{
+//     public static void main(String args[]) {
+//         int n = 4;
+//         for(int line = n; line >= 1; line--){
+//             for(int num = 1; num <= line; num++){
+//                 System.out.print(num + " ");
+//             }
+
+//             System.out.println();
+//         }
+//     }
+// }
+
+// PRACTICE PROBLEMS
+// 1. FLOYD'S TRIANGEL PATTERN
+
+// public class JavaPractice {
+//     public static void main(String args[]) {
+//         int n = 5;
+//         int num = 1;
+//         for(int i=1; i<=n; i++){
+//             for(int j=1; j<=i; j++){
+//                 System.out.print(num + " ");
+//                 num++;
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+// 2. PYRAMID PATTERN
+
+// import java.util.Scanner;
+
+// public class JavaPractice {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
+//         System.out.print("Enter the number of rows: ");
+//         int rows = scanner.nextInt();
+//         scanner.close();
+
+//         for (int i = 1; i <= rows; i++) {
+
+//             for (int j = 1; j <= rows - i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int k = 1; k <= (2 * i - 1); k++) {
+//                 System.out.print("*");
+//             }
+            
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+       
+//        int rows = 8;
+//        for(int line = 1; line <= rows; line++){
+//             for(int space = 1; space <= rows - line; space++){
+//                 System.out.print(" ");
+//             }
+//             for(int star = 1; star <= (2*line - 1); star++){
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//        }
+
+//     }
+// }
+
+public class JavaPractice{
+    public static void main(String args[]){
+       
+       int rows = 4;
+       for(int line = 1; line <= rows; line++){
+            for(int space = 1; space <= rows - line; space++){
+                System.out.print(" ");
+            }
+            for(int star = 1; star <= line; star++){
+                System.out.print("*");
+            }
+            System.out.println();
+       }
+       
+
+    }
+}
