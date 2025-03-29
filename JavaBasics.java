@@ -933,6 +933,25 @@ public class JavaBasics{
     }
 }
 
+//OR ANOTHER PYRAMID
+
+public class JavaBasics{
+    public static void main(String args[]){
+       
+        int rows = 5;
+        for(int line = 1; line <= rows; line++){
+            for(int space = 1; space <= rows - line; space++){
+                System.out.print(" ");
+            }
+            for(int star = 1; star <= line; star++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
 // 3. INVERTED & ROTATED HALF-PYRAMID PATTERN
 
 public class JavaBasics{
@@ -968,3 +987,66 @@ public class JavaBasics{
 
     }
 }
+
+// 5. NUMBER PYRAMID PATTERN
+
+public class JavaBasics{
+    public static void main(String args[]){
+       
+        int rows = 5;
+        int num = 1;
+        for(int line = 1; line <= rows; line++){
+            for(int space = 1; space <= rows - line; space++){
+                System.out.print(" ");
+            }
+            for(int star = 1; star <= line; star++){
+                System.out.print(line + " ");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+// 6. SOLID ROMBUS PATTERN
+
+public class JavaBasics{
+    public static void main(String args[]){
+       
+        int rows = 5;
+        for(int line = 1; line <= rows; line++){
+            for(int space = 1; space <= rows - line; space++){
+                System.out.print(" ");
+            }
+            for(int star = 1; star <= rows; star++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+// 7. HOLLOW RECTANGLE PATTERN
+
+public class JavaBasics{
+    public static void main(String args[]){
+       
+        int n = 4;      
+        int m = 5;      
+        for(int l = 1; l <= n; l++){
+            for(int s = 1; s <= m; s++){
+                if(l == 1 || s == 1 || l == n || s == m){
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+// 8. HOLLOW ROMBUS PATTERN
+

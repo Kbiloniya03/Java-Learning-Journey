@@ -271,11 +271,31 @@ import java.util.*;
 //     }
 // }
 
-public class JavaPractice{
+// public class JavaPractice{
+//     public static void main(String args[]){
+       
+//         int n = 4;      //rows
+//         int m = 5;      //columns
+//         for(int l = 1; l <= n; l++){
+//             for(int s = 1; s <= m; s++){
+//                 if(l == 1 || s == 1 || l == n || s == m){
+//                     System.out.print("* ");
+//                 }
+//                 else{
+//                     System.out.print("  ");
+//                 }
+//             }
+//             System.out.println();
+//         }
+        
+//     }
+// }
+
+ 
+ public class JavaPractice{
     public static void main(String args[]){
        
-        int rows = 5;
+     
         
-
     }
 }
