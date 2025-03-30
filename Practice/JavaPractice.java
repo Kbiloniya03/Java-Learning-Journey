@@ -316,3 +316,60 @@ import java.util.*;
         
 //     }
 // }
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+//         int rows = 5;
+//         for(int line = 1; line <= rows; line++){
+//             for(int space = 1; space <= rows; space++){
+//                 System.out.print(" ");
+//             }
+//             for(int num = 1; num <= line; num++){
+//                 System.out.print(num);                
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+//         int rows = 5;
+
+//         for(int line = 1; line <= rows; line++){
+
+//             for(int space = 1; space <= rows - line; space++){
+//                 System.out.print("  ");
+//             }
+
+//             for(int num = line; num >= 1; num--){
+//                 System.out.print(num + " ");
+//             }
+
+//              for(int num = 2; num <= line; num++){
+//                 System.out.print(num + " ");                
+//             }
+
+//             System.out.println();
+//         }
+//     }
+// }
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+        
+//        int rows = 5;
+//        for(int line = 1; line <= rows; line++){
+//         for(int star = 1; star <= line; star++){
+//             if((line + star)%2 == 0){
+//             System.out.print("1");
+//             }
+//             else{
+//             System.out.print("0");
+//             }
+//         }
+//         System.out.println();
+//        }
+
+//     }
+// }
