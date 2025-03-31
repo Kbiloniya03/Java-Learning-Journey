@@ -614,3 +614,124 @@
 //     }
 // }
 
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+//         double a = 5;
+//         double result = a/2;
+//         System.out.print(result);
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static void decToBin(int n){
+//         int power = 0;
+//         int binary = 0;
+
+//         for(int i = n; i > 0; i/=2){
+//             int lastDigit = i % 2;
+//             binary = binary + (lastDigit * (int) Math.pow(10, power));
+//             power++;
+//         }
+
+//         System.out.print("Binary no of " + n + " is " + binary);
+
+//     }
+//     public static void main(String args[]){
+//       int decimalNo = 9;
+//       decToBin(decimalNo);
+
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static void average(double a, double b, double c){
+//         double avg = (a + b + c)/3;
+//         System.out.println("Average of " + a + " " + b + " " + c + " = " + avg);
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter first number:- ");
+//         double a = sc.nextDouble();
+//         System.out.print("Enter second number:- ");
+//         double b = sc.nextDouble();
+//         System.out.print("Enter third number:- ");
+//         double c = sc.nextDouble();
+
+//         average(a, b, c);
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static boolean isEven(int n){
+//       if(n % 2 == 0){
+//         return true;
+//       }
+//       else{
+//         return false;
+//       }
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter your number:- ");
+//         int n = sc.nextInt();
+
+//         if(isEven(n)){
+//             System.out.print(true);
+//         }
+//         else{
+//             System.out.print(false);
+//         }
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static void isPalindrome(int n){
+//         int num = n;
+//         int rev = 0;
+
+//         for(int i = n; i > 0; i/=10){
+//             int lastDigit = i % 10;
+//             rev = (rev * 10) + lastDigit;
+//         }
+
+//         if(num == rev){
+//             System.out.print(n + " is Palindorme Number.");
+//         }
+//         else{
+//             System.out.print(n + " is Not Palindorme Number.");
+//         }
+        
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter your number:- ");
+//         int n = sc.nextInt();
+
+//         isPalindrome(n);
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+//         int a = -10;
+//         int b = 20;
+//         int c = 30;
+
+//         System.out.println(Math.abs(a));
+//     }
+// }
