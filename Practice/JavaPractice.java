@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 
 // // While Loop
 
@@ -373,3 +373,107 @@ import java.util.*;
 
 //     }
 // }
+
+// public class JavaPractice{
+//     public static void printHelloWorld(){
+//         System.out.println("Hello World");
+//         System.out.println("Hello World");
+//         System.out.println("Hello World");
+//     }
+
+//     public static void main(String args[]){
+//         printHelloWorld();
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static void calculateSum(int num1, int num2){
+//         int sum = num1 + num2;
+//         System.out.print("Sum is " + sum);
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter first number:- ");
+//         int a = sc.nextInt();
+//         System.out.print("Enter second number:- ");
+//         int b = sc.nextInt();
+//         calculateSum(a, b);
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static int product(int a, int b){
+//         int pro = a * b;
+//         return pro;
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter first number:- ");
+//         int a = sc.nextInt();
+//         System.out.print("Enter second number:- ");
+//         int b = sc.nextInt();
+
+//         int pro = product(a, b);
+//         System.out.print("Product is " + pro);
+
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static int factorial(int n){
+
+//         if(n < 0){
+//             System.out.print("For factorial enter postive no !");
+//             return -1;
+//         }
+
+//         int fact = 1;
+//         for(int i = 1; i <= n; i++){
+//             fact *= i;
+//         }
+//         return fact;
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter your number:- ");
+//         int a = sc.nextInt();
+//         int fact = factorial(a);
+
+//         if(fact != -1){
+//             System.out.println("Factorial of " + a + " is " + fact);
+//         }
+//     }
+// }
+
+public class JavaPractice{
+    public static int factorial(int n){
+        int fact = 1;
+        for(int i = 1; i <= n; i++){
+            fact *= i;
+        }
+        return fact;
+    }
+
+    public static int binoCoeff(int n, int r){
+        int fact_n = factorial(n);
+        int fact_r = factorial(r);
+        int fact_nmr = factorial(n-r);
+        int binoCoeff = fact_n/(fact_r*fact_nmr);
+
+        return binoCoeff;
+    }
+
+    public static void main(String args[]){
+        System.out.print(binoCoeff(10, 5));
+    }
+}

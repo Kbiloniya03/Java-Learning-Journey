@@ -1119,3 +1119,141 @@ public class JavaBasics{
     }
 }
 
+// FUNCTION & METHODS
+// a. Basic Function syntax how its work
+
+public class JavaBasics{
+    public static void printHelloWorld(){
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+    }
+
+    public static void main(String args[]){
+        printHelloWorld();
+    }
+}
+
+// b. Syntax with parameter and sum of a & b
+
+import java.util.*;
+
+public class JavaBasics{
+    public static int calculateSum(int num1, int num2){
+        int sum = num1 + num2;
+        return sum;
+    }
+
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number:- ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number:- ");
+        int b = sc.nextInt();
+
+        int sum = calculateSum(a, b);
+        System.out.print("Sum is " + sum);
+    }
+}
+
+// c. Call by value
+
+public class JavaBasics{
+    public static void swap(int a, int b){
+        int temp = a;
+        a = b;
+        b = temp;
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+    public static void main(String args[]){
+        int a = 10;
+        int b = 5;
+        
+        swap(a,b);
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
+
+// d. Product of a & b
+
+import java.util.*;
+
+public class JavaBasics{
+    public static int product(int a, int b){
+        int pro = a * b;
+        return pro;
+    }
+
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number:- ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number:- ");
+        int b = sc.nextInt();
+
+        int pro = product(a, b);
+        System.out.print("Product is " + pro);
+
+    }
+}
+
+// e. Factorial of n number
+
+import java.util.*;
+
+public class JavaBasics{
+    public static int factorial(int n){
+
+        if(n < 0){
+            System.out.print("For factorial enter postive no !");
+            return -1;
+        }
+
+        int fact = 1;
+        for(int i = 1; i <= n; i++){
+            fact *= i;
+        }
+        return fact;
+    }
+
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your number:- ");
+        int a = sc.nextInt();
+        int fact = factorial(a);
+
+        if(fact != -1){
+            System.out.println("Factorial of " + a + " is " + fact);
+        }
+    }
+}
+
+// f. Find Binomial Cofficient
+
+
+public class JavaBasics{
+    public static int factorial(int n){
+        int fact = 1;
+        for(int i = 1; i <= n; i++){
+            fact *= i;
+        }
+        return fact;
+    }
+
+    public static int binoCoeff(int n, int r){
+        int fact_n = factorial(n);
+        int fact_r = factorial(r);
+        int fact_nmr = factorial(n-r);
+        int binoCoeff = fact_n/(fact_r*fact_nmr);
+
+        return binoCoeff;
+    }
+
+    public static void main(String args[]){
+        System.out.print(binoCoeff(10, 5));
+    }
+}
