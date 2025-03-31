@@ -1257,3 +1257,131 @@ public class JavaBasics{
         System.out.print(binoCoeff(10, 5));
     }
 }
+
+// Function Overloading Using Parameters
+
+public class JavaBasics{
+    public static int sum(int a, int b){
+        return a + b;
+    }
+
+    public static int sum(int a, int b, int c){
+        return a + b + c;
+    }
+
+    public static void main(String args[]){
+        System.out.println("Sum of 2 No:- " + sum(5, 3));
+        System.out.println("Sum of 3 No:- " + sum(5, 2, 1));
+    }
+}
+
+// Function Overloading Using Datatypes
+
+public class JavaBasics{
+    public static int sum(int a, int b){
+        return a + b;
+    }
+
+    public static float sum(float a, float b){
+        return a + b;
+    }
+
+    public static void main(String args[]){
+        System.out.println(sum(5, 3));
+        System.out.println(sum(3.2f, 4.8f));
+    }
+}
+
+// Create a function to check if it is prime no or not
+
+import java.util.*;
+
+public class JavaBasics {
+    public static boolean isPrime(int n) {
+        if (n <= 1) return false; // 0 and 1 are not prime
+        if (n == 2) return true; // 2 is prime
+        if (n % 2 == 0) return false; // Even numbers > 2 are not prime
+
+        // Loop from 2 to √n for efficiency
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                return false; // Found a divisor, not prime
+            }
+        }
+
+        return true; // No divisors found, it's prime
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your number: ");
+        int n = sc.nextInt();
+
+        if (isPrime(n)) {
+            System.out.println(n + " is a prime number.");
+        } else {
+            System.out.println(n + " is not a prime number.");
+        }
+    }
+}
+
+// Prime number in range
+
+import java.util.*;
+
+public class JavaPractice{
+    public static boolean isPrime(int n){
+        if(n == 2) return true;
+        if(n <= 1) return false;
+        if(n % 2 == 0) return false;
+
+        for(int i = 2; i <= Math.sqrt(n); i++){
+            if(n % i == 0){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static void primeInRange(int n){
+        for(int i = 2; i <= n; i++){
+            if(isPrime(i)){
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Your Number:- ");
+        int n = sc.nextInt();
+        primeInRange(n);
+    }
+}
+
+// Binary to Decimal
+
+import java.util.*;
+
+public class JavaBasics{
+    public static void binToDec(int n){
+        int power = 0;
+        int decimal = 0;
+
+        for(int i = n; i > 0; i /= 10){
+            int lastDigit = i % 10;
+            decimal = decimal + (lastDigit * (int) Math.pow(2, power));
+            power++;
+        }
+
+        System.out.print(n + " Binary Num Decimal is " + decimal);
+    }
+
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Your Binary Number:- ");
+        int n = sc.nextInt();
+        binToDec(n);
+    }
+}
