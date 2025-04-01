@@ -735,3 +735,95 @@
 //         System.out.println(Math.abs(a));
 //     }
 // }
+
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+//         int rows = 4;
+
+//         for(int line = 1; line <= rows; line++){
+
+//             for(int star = 1; star <= line; star++){
+//                 System.out.print("* ");
+//             }
+
+//             for(int space = 1; space <= 2*(rows-line); space++){
+//                 System.out.print("  ");
+//             }
+
+//             for(int star = 1; star <= line; star++){
+//                 System.out.print("* ");
+//             }
+
+//             System.out.println();
+//         }
+
+//             for(int line = rows; line >= 1; line--){
+
+//             for(int star = 1; star <= line; star++){
+//                 System.out.print("* ");
+//             }
+
+//             for(int space = 1; space <= 2*(rows-line); space++){
+//                 System.out.print("  ");
+//             }
+
+//             for(int star = 1; star <= line; star++){
+//                 System.out.print("* ");
+//             }
+
+//             System.out.println();
+//         }
+        
+//     }
+// }
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+//         int rows = 10;
+//         for(int i = 1; i <= rows; i++){
+//             for(int j = 1; j <= rows - i; j++){
+//                 System.out.print(" ");
+//             }
+//             for(int k = 1; k <= i; k++){
+//                 System.out.print("* ");
+//             }
+//             System.out.println();
+//         }
+
+//          for(int i = rows - 1; i >= 1; i--){
+//             for(int j = 1; j <= rows - i; j++){
+//                 System.out.print(" ");
+//             }
+//             for(int k = 1; k <= i; k++){
+//                 System.out.print("* ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+//         int rows = 5;
+//         for(int i = 1; i <= rows; i++){
+//             for(int j = 1; j <= rows - i; j++){
+//                 System.out.print("  ");
+//             }
+//             for(int k = 1; k <= (2 * i - 1); k++){
+//                 System.out.print("* ");
+//             }
+//             System.out.println();
+//         }
+
+//          for(int i = rows - 1; i >= 1; i--){
+//             for(int j = 1; j <= rows - i; j++){
+//                 System.out.print("  ");
+//             }
+//             for(int k = 1; k <= (2 * i - 1); k++){
+//                 System.out.print("* ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
