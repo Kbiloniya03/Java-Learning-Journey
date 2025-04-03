@@ -1678,3 +1678,43 @@ public class JavaPractice{
         // hour_glass(n, m);
     }
 }
+
+
+// ARRAYS IN JAVA
+
+import java.util.*;
+
+public class JavaBasics{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        // Creating Array
+        int marks[] = new int[3];
+
+        // Taking Input 
+        marks[0] = sc.nextInt();
+        marks[1] = sc.nextInt();
+        marks[2] = sc.nextInt();
+
+        // Output
+        System.out.println("Marks before updation");
+        System.out.print(marks[0] + " ");
+        System.out.print(marks[1] + " ");
+        System.out.println(marks[2] + " ");
+
+        //Updation of Array
+        marks[0] = marks[0] + 5;
+        marks[1] = marks[1] + 5;
+        marks[2] = marks[2] + 5;
+
+        System.out.println("Marks after updation");
+        System.out.print(marks[0] + " ");
+        System.out.print(marks[1] + " ");
+        System.out.println(marks[2] + " ");
+
+        // Length of Array
+        System.out.println("Lenght of Marks Array = " + marks.length);
+    }
+}
+
+// ARRAY AS ARGUMENT IN FUNCTION
+

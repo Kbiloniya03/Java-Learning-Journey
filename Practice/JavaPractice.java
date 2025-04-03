@@ -828,86 +828,131 @@
 //     }
 // }
 
+// public class JavaPractice{
+//     public static void hollow_square_with_cross(int n){
+//         //1st Half
+//         for(int i = 1; i <= n; i++){
+//             for(int j = 1; j <=n; j++){
+//                 if((i == j)){
+//                     System.out.print("*");
+//                 }
+//                 else{
+//                     System.out.print(" ");
+//                 }
+//             }
+
+//             for(int j = n-1; j >= 1; j--){
+//                  if((i == j)){
+//                     System.out.print("*");
+//                 }
+//                 else{
+//                     System.out.print(" ");
+//                 }
+//             }
+//                 System.out.println();
+//         }
+
+//         //2nd Half
+//         for(int i = n-1; i >= 1; i--){
+//             for(int j = 1; j <=n; j++){
+//                 if((i == j)){
+//                     System.out.print("*");
+//                 }
+//                 else{
+//                     System.out.print(" ");
+//                 }
+//             }
+
+//             for(int j = n-1; j >= 1; j--){
+//                  if((i == j)){
+//                     System.out.print("*");
+//                 }
+//                 else{
+//                     System.out.print(" ");
+//                 }
+//             }
+//                 System.out.println();
+//         }
+//     }
+
+//     public static void hour_glass(int n, int m){
+//         for(int i = 1; i <= n; i++){
+//             for(int j = 1; j <= m; j++){
+                
+//                 if(i == j || i == 1 || i+j == m+1){
+//                     System.out.print("*");
+//                 }
+//                 else{
+//                     System.out.print(" ");
+//                 }
+//             }
+//             System.out.println();
+//         }
+
+//         for(int i = n-1; i >= 1; i--){
+//             for(int j = 1; j <= m; j++){
+                
+//                 if(i == j || i == 1 || i+j == m+1){
+//                     System.out.print("*");
+//                 }
+//                 else{
+//                     System.out.print(" ");
+//                 }
+//             }
+//             System.out.println();
+//         }
+
+//     }
+
+//     public static void main(String args[]){
+//         int n = 5;
+//         int m = 9;
+//         // hollow_square_with_cross(n);
+//         hour_glass(n, m);
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         int marks[] = new int[3];
+
+//         marks[0] = sc.nextInt();
+//         marks[1] = sc.nextInt();
+//         marks[2] = sc.nextInt();
+
+//         System.out.println("Marks before updation");
+//         System.out.print(marks[0] + " ");
+//         System.out.print(marks[1] + " ");
+//         System.out.println(marks[2] + " ");
+
+//         marks[0] = marks[0] + 5;
+//         marks[1] = marks[1] + 5;
+//         marks[2] = marks[2] + 5;
+
+//         System.out.println("Marks after updation");
+//         System.out.print(marks[0] + " ");
+//         System.out.print(marks[1] + " ");
+//         System.out.println(marks[2] + " ");
+
+//         System.out.println("Lenght of Marks Array = " + marks.length);
+//     }
+// }
+
+import java.util.*;
+
 public class JavaPractice{
-    public static void hollow_square_with_cross(int n){
-        //1st Half
-        for(int i = 1; i <= n; i++){
-            for(int j = 1; j <=n; j++){
-                if((i == j)){
-                    System.out.print("*");
-                }
-                else{
-                    System.out.print(" ");
-                }
-            }
-
-            for(int j = n-1; j >= 1; j--){
-                 if((i == j)){
-                    System.out.print("*");
-                }
-                else{
-                    System.out.print(" ");
-                }
-            }
-                System.out.println();
-        }
-
-        //2nd Half
-        for(int i = n-1; i >= 1; i--){
-            for(int j = 1; j <=n; j++){
-                if((i == j)){
-                    System.out.print("*");
-                }
-                else{
-                    System.out.print(" ");
-                }
-            }
-
-            for(int j = n-1; j >= 1; j--){
-                 if((i == j)){
-                    System.out.print("*");
-                }
-                else{
-                    System.out.print(" ");
-                }
-            }
-                System.out.println();
-        }
-    }
-
-    public static void hour_glass(int n, int m){
-        for(int i = 1; i <= n; i++){
-            for(int j = 1; j <= m; j++){
-                
-                if(i == j || i == 1 || i+j == m+1){
-                    System.out.print("*");
-                }
-                else{
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
-        }
-
-        for(int i = n-1; i >= 1; i--){
-            for(int j = 1; j <= m; j++){
-                
-                if(i == j || i == 1 || i+j == m+1){
-                    System.out.print("*");
-                }
-                else{
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
-        }
-
-    }
-
     public static void main(String args[]){
-        int n = 5;
-        int m = 9;
-        // hollow_square_with_cross(n);
-        hour_glass(n, m);
+        Scanner sc = new Scanner(System.in);
+        int marks[] = new int[3];
+
+        marks[0] = sc.nextInt();
+        marks[1] = sc.nextInt();
+        marks[2] = sc.nextInt();
+        marks[3] = sc.nextInt();
+
+        System.out.print(marks[2]);
     }
 }
