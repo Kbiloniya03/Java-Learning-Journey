@@ -941,18 +941,89 @@
 //     }
 // }
 
-import java.util.*;
+// import java.util.*;
 
-public class JavaPractice{
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        int marks[] = new int[3];
+// public class JavaPractice{
+//     public static void update(int marks[], int notChangeable){
+//         notChangeable = 50;
+//         for(int i = 0; i < marks.length; i++){
+//             marks[i] =  marks[i] + 5;
+//         }
+//     }
 
-        marks[0] = sc.nextInt();
-        marks[1] = sc.nextInt();
-        marks[2] = sc.nextInt();
-        marks[3] = sc.nextInt();
+//     public static void main(String args[]){
+//         int marks[] = {50, 60, 70, 80, 90, 100};
+//         int notChangeable = 10;
+//         update(marks, notChangeable);
 
-        System.out.print(marks[2]);
-    }
-}
+//         System.out.println("Not Changeable = " + notChangeable);
+//         System.out.print("Marks Array = ");
+//         for(int i = 0; i < marks.length; i++){
+//             System.out.print(marks[i] + " ");
+//         }
+//     }
+// }
+
+
+// public class JavaPractice{
+//     public static int linearSearch(int numbers[], int key){
+//         for(int i = 0; i < numbers.length; i++){
+//             if(numbers[i] == key){
+//                 return i;
+//             }
+//         }
+//         return -1;
+//     }
+
+//     public static void main(String args[]){
+//         int numbers[] = {2, 4, 6, 8, 10, 12, 14, 16};
+//         int key = 10;
+
+//         int index = linearSearch(numbers, key);
+
+//         if(index == -1){
+//             System.out.print("Not Founded!");
+//         }
+//         else{
+//             System.out.print("Key is at index = " + index);
+//         }
+
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static int largestNumber(int numbers[]){
+//         // - Infinity = Integer.MIN_VALUE
+//         int largest = Integer.MIN_VALUE; 
+
+//         for(int i = 0; i < numbers.length; i++){
+//             if(largest < numbers[i]){
+//                 largest = numbers[i];
+//             }
+//         }
+//         return largest;
+//     }
+
+//     public static int smallestNumber(int numbers[]){
+//         // + Infinity = Integer.MAX_VALUE
+//         int smallest = Integer.MAX_VALUE; 
+
+//         for(int i = 0; i < numbers.length; i++){
+//             if(smallest > numbers[i]){
+//                 smallest = numbers[i];
+//             }
+//         }
+//         return smallest;
+//     }
+
+//     public static void main(String args[]){
+//         int numbers[] = {1, 2, 6, 3, 5};
+//         int largest = largestNumber(numbers);
+//         int smallest = smallestNumber(numbers);
+        
+//         System.out.println("Smallest Number in Array = " + smallest);
+//         System.out.println("Largest Number in Array = " + largest);
+//     }
+// }
