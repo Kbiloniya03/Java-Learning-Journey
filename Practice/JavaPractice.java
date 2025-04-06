@@ -1105,3 +1105,90 @@
 //        printSubArray(numbers);
 //     }
 // }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static void maxSumSubArray2(int numbers[]){
+//         int largest = Integer.MIN_VALUE;
+//         int currSum = 0;
+//         int preflix[] = new int[numbers.length];
+
+//         preflix[0] = numbers[0];
+
+//         for(int i = 1; i < numbers.length; i++){
+//             preflix[i] = preflix[i-1] + numbers[i];
+//         }
+
+//         for(int i = 0; i < numbers.length; i++){
+//             int start = i;
+
+//             for(int j = i + 1; j < numbers.length; j++){
+//                 int end = j;
+
+//                 currSum = start == 0 ? preflix[end] : preflix[end] - preflix[start - 1];
+
+//                 if(currSum > largest){
+//                     largest = currSum;
+//                 }
+//             }
+//         }
+//             System.out.println("Maximum of Subarray = " + largest);
+//     } 
+
+//     public static void main(String args[]){
+//         int numbers[] = {1, -2, 6, -1, 3};
+//         maxSumSubArray2(numbers);
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static void kadane(int numbers[]){
+//         int maxSum = Integer.MIN_VALUE; 
+//         int currSum = 0;
+
+//         for(int i = 0; i < numbers.length; i++){
+//             currSum = currSum + numbers[i];
+//             if(currSum < 0){
+//                 currSum = -1;
+//             }
+
+//             maxSum = Math.max(currSum, maxSum);
+//         }  
+//         System.out.print(maxSum);
+//     }
+
+//     public static void main(String args[]){
+//         int numbers[] = {-10, -9, -2, -3, -4, -5};
+//         kadane(numbers);
+        
+//     }
+// }
+
+public class JavaPractice{
+    public static void sort(int array[]){
+        for(int i = 0; i < array.length; i++){
+            for(int j = i + 1; j < array.length; j++){
+                if(array[i] < array[j]){
+                    int temp = array[j];
+                    array[j] = array[i];
+                    array[i] = temp;
+                }
+            }
+        }
+
+    }
+
+    public static void main(String args[]){
+        int array[] = {5, 2, 4, 1, 6, 3};
+        sort(array);
+        
+        System.out.print("Sorted Array = ");
+
+        for(int i = 0; i < array.length; i++){
+            System.out.print(array[i] + " ");
+        }
+    }
+}
