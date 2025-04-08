@@ -2298,7 +2298,7 @@ public class JavaBasics{
 
 // 3. INSERTION SORT
 
-public class JavaPractice {
+public class JavaBasics{
     public static void insertionSort(int nums[]) {
         int n = nums.length;
         for(int i = 1; i < n; i++){
@@ -2329,7 +2329,7 @@ public class JavaPractice {
 // ASCENDING ORDER
 import java.util.Arrays;
 
-public class JavaPractice {
+public class JavaBasics {
     public static void main(String args[]) {
         int nums[] = {5, 4, 1, 3, 2, 6, 9, 8, 7};
         Arrays.sort(nums, 0, 5);
@@ -2342,6 +2342,138 @@ public class JavaPractice {
 
 // DESCENDING ORDER
 
+import java.util.Arrays;
+import java.util.Collections;
 
+public class JavaBasics{
+    public static void main(String args[]) {
+        Integer nums[] = {5, 4, 1, 3, 2, 6, 9, 8, 7};
+        Arrays.sort(nums, Collections.reverseOrder());
+
+        for(int i = 0; i < nums.length; i++){
+            System.out.print(nums[i] + " ");
+        }
+    }
+}
 
 // 4. COUNTING SORT (ADVANCED)
+
+import java.util.*;
+
+public class JavaBasics{
+    public static void countingSort(int nums[]){
+        int maximum = Integer.MIN_VALUE;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] > maximum){
+                maximum = nums[i];
+            }
+        }
+
+        int count[] = new int[maximum + 1];
+
+        for(int i = 0; i < nums.length; i++){
+            count[nums[i]] = count[nums[i]] + 1;
+        }
+
+        int index = 0;
+
+        for(int i = 0; i < count.length; i++){
+            while(count[i] > 0){
+                nums[index] = i;
+                index++;
+                count[i]--;
+            }
+        }
+
+    }
+
+    public static void main(String args[]) {
+       int nums[] = {1, 4, 1, 3, 2, 4, 3, 7};
+       countingSort(nums);
+
+       for(int i = 0; i < nums.length; i++){
+        System.out.print(nums[i] + " ");
+       }
+    }
+}
+
+// PRACTICE QUESTION
+// 1. USE ALL SORT ALGORITHMS IN THIS ARRAY IN DESCENDING ORDER
+// {3, 6, 2, 1, 8, 7, 4, 5, 3, 1}
+
+import java.util.*;
+
+public class JavaBasics{
+    public static void bubbleSort(int arr[]){
+        int n = arr.length;
+        for(int i = 0; i < n - 1; i++){
+            for(int j = 0; j < (n - i - 1); j++){
+                if(arr[j] < arr[j + 1]){
+                    int temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+    }
+
+    public static void selectionSort(int arr[]){
+        int n = arr.length;
+        for(int i = 0; i < n - 1; i++){
+            int index = i;
+            for(int j = i + 1; j < n; j++){
+                if(arr[index] < arr[j]){
+                 index = j;
+                }
+            }
+            int temp = arr[index];
+            arr[index] = arr[i];
+            arr[i] = temp;
+        }   
+    }
+
+    public static void insertionSort(int arr[]){
+        
+    }
+
+    public static void countingSort(int arr[]){
+        int max = Integer.MIN_VALUE;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > max){
+                max = arr[i];
+            }
+        }
+
+        int count[] = new int[max + 1];
+
+        for(int i = 0; i < arr.length; i++){
+            count[arr[i]] = count[arr[i]] + 1;
+        }
+
+        int index = arr.length - 1;
+
+        for(int i = 0; i < count.length; i++){
+            while(count[i] > 0){
+                arr[index] = i;
+                index--;
+                count[i]--;
+            }
+        }
+    }
+
+    public static void printArray(int arr[]){
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    public static void main(String args[]){
+        int nums[] = {3, 6, 2, 1, 8, 7, 4, 5, 3, 1};
+        // bubbleSort(nums);
+        // selectionSort(nums);
+        // insertionSort(nums);
+        // countingSort(nums);
+        printArray(nums);
+    }
+
+}
