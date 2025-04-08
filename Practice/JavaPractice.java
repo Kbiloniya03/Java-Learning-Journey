@@ -1270,3 +1270,111 @@
 //     }
 // }
 
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static int stock(int prices[]){
+//         int buyPrice = Integer.MAX_VALUE;
+//         int maxProfit = 0;
+
+//         for(int i = 0; i < prices.length; i++){
+//             if(buyPrice > prices[i]){
+//                 buyPrice = prices[i];
+//             }
+//             else{
+//                 int profit = prices[i] - buyPrice;
+//                 maxProfit = Math.max(maxProfit, profit);
+//             }
+//         }
+
+//         return maxProfit;
+//     }
+
+//     public static void main(String args[]){
+//         int prices[] = {7, 1, 5, 3, 6, 4};
+//         System.out.println("Maximum Profit is = " + stock(prices));
+//     }
+// }
+
+
+// import java.util.*;
+
+// public class JavaPractice {
+//     public static void bubbleSort(int nums[]) {
+//         int n = nums.length;
+//         for(int i = 0; i < n - 1; i++){
+//             for(int j = 0; j < (n - i - 1); j++){
+//                 if(nums[j] > nums[j + 1]){
+//                     int temp = nums[j];
+//                     nums[j] = nums[j + 1];
+//                     nums[j + 1] = temp;
+//                 }
+//             }
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         int nums[] = {5, 4, 1, 3, 2};
+//         bubbleSort(nums);
+//         System.out.print("Sorted Array = ");
+//         for (int i = 0; i < nums.length; i++) {
+//             System.out.print(nums[i] + " ");
+//         }
+//     }
+// }
+
+
+// public class JavaPractice {
+//     public static void insertionSort(int nums[]) {
+//         int n = nums.length;
+//         for(int i = 1; i < n; i++){
+//             int curr = nums[i];
+//             int prev = i-1;
+
+//             while(prev >= 0 && nums[prev] > curr){
+//                 nums[prev+1] = nums[prev];
+//                 prev--;
+//             }
+//             nums[prev+1] = curr;
+//         }
+        
+//     }
+
+//     public static void main(String args[]) {
+//         int nums[] = {5, 4, 1, 3, 2};
+//         insertionSort(nums);
+//         System.out.print("Insertion Sorted Array = ");
+//         for (int i = 0; i < nums.length; i++) {
+//             System.out.print(nums[i] + " ");
+//         }
+//     }
+// }
+
+// import java.util.Arrays;
+
+// public class JavaPractice {
+//     public static void main(String args[]) {
+//         int nums[] = {5, 4, 1, 3, 2, 6, 9, 8, 7};
+//         Arrays.sort(nums, 0, 5);
+
+//         for(int i = 0; i < nums.length; i++){
+//             System.out.print(nums[i] + " ");
+//         }
+//     }
+// }
+
+
+import java.util.Arrays;
+import java.util.Collections;
+
+
+public class JavaPractice {
+    public static void main(String args[]) {
+        Integer nums[] = {5, 4, 1, 3, 2, 6, 9, 8, 7};
+        Arrays.sort(nums, Collections.reverseOrder());
+
+        for(int i = 0; i < nums.length; i++){
+            System.out.print(nums[i] + " ");
+        }
+    }
+}

@@ -2157,6 +2157,32 @@ public class JavaBasics{
 
 // BEST TIME TO BUY AND SELL STOCK
 
+import java.util.*;
+
+public class JavaBasics{
+    public static int stock(int prices[]){
+        int buyPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for(int i = 0; i < prices.length; i++){
+            if(buyPrice > prices[i]){
+                buyPrice = prices[i];
+            }
+            else{
+                int profit = prices[i] - buyPrice;
+                maxProfit = Math.max(maxProfit, profit);
+            }
+        }
+
+        return maxProfit;
+    }
+
+    public static void main(String args[]){
+        int prices[] = {7, 1, 5, 3, 6, 4};
+        System.out.println("Maximum Profit is = " + stock(prices));
+    }
+}
+
 // PRACTICE QUESTIONS
 
 // 1. Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
@@ -2215,3 +2241,107 @@ public class JavaBasics{
 // CASE III Input: nums = [ 0 ]  Output:   [ ]
 
 
+// BASIC SORTING ALGORITHUMS
+// 1. BUBBLE SORT
+
+public class JavaBasics {
+    public static void bubbleSort(int nums[]) {
+        int n = nums.length;
+        for(int i = 0; i < n - 1; i++){
+            for(int j = 0; j < (n - i - 1); j++){
+                if(nums[j] > nums[j + 1]){
+                    int temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void main(String args[]) {
+        int nums[] = {5, 4, 1, 3, 2};
+        bubbleSort(nums);
+        System.out.print("Bubble Sorted Array = ");
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
+        }
+    }
+}
+
+// 2. SELECTION SORT
+
+public class JavaBasics{
+    public static void selectionSort(int nums[]) {
+        int n = nums.length;
+        for(int i = 0; i < n-1; i++){
+            int minPos = i;
+            for(int j = i + 1; j <= n-1; j++){
+                if(nums[minPos] > nums[j]){
+                    minPos = j;
+                }
+            }
+            int temp = nums[minPos];
+            nums[minPos] = nums[i];
+            nums[i] = temp; 
+        }
+    }
+
+    public static void main(String args[]) {
+        int nums[] = {5, 4, 1, 3, 2};
+        selectionSort(nums);
+        System.out.print("Selection Sorted Array = ");
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
+        }
+    }
+}
+
+// 3. INSERTION SORT
+
+public class JavaPractice {
+    public static void insertionSort(int nums[]) {
+        int n = nums.length;
+        for(int i = 1; i < n; i++){
+            int curr = nums[i];
+            int prev = i-1;
+
+            while(prev >= 0 && nums[prev] > curr){
+                nums[prev+1] = nums[prev];
+                prev--;
+            }
+            nums[prev+1] = curr;
+        }
+        
+    }
+
+    public static void main(String args[]) {
+        int nums[] = {5, 4, 1, 3, 2};
+        insertionSort(nums);
+        System.out.print("Insertion Sorted Array = ");
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
+        }
+    }
+}
+
+// INBUILT SORT METHOD OF ARRAY
+
+// ASCENDING ORDER
+import java.util.Arrays;
+
+public class JavaPractice {
+    public static void main(String args[]) {
+        int nums[] = {5, 4, 1, 3, 2, 6, 9, 8, 7};
+        Arrays.sort(nums, 0, 5);
+
+        for(int i = 0; i < nums.length; i++){
+            System.out.print(nums[i] + " ");
+        }
+    }
+}
+
+// DESCENDING ORDER
+
+
+
+// 4. COUNTING SORT (ADVANCED)
