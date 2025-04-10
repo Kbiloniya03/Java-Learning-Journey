@@ -2597,3 +2597,171 @@ public class JavaBasics{
 }
 
 // SPIRAL MATRIX
+public class JavaBasics{
+    public static void spiral(int arr[][]){
+        int startRow = 0;
+        int startCol = 0;
+        int endRow = arr.length - 1;
+        int endCol = arr[0].length - 1;
+
+        while(startRow <= endRow && startCol <= endCol){
+            //1st
+            for(int i = startRow; i <= endRow; i++){
+                System.out.print(arr[startRow][i] + " ");
+            }
+
+            //2nd 
+            for(int j = startCol + 1; j <= endCol; j++){
+                System.out.print(arr[j][endCol] + " ");
+            }
+
+            //3rd 
+            for(int i = endRow - 1; i >= startRow; i--){
+                System.out.print(arr[endRow][i] + " ");
+            }
+
+            //4th 
+            for(int j = endCol - 1; j > startCol; j--){
+                System.out.print(arr[j][startCol] + " ");
+            }
+
+            startRow++;
+            startCol++;
+            endRow--;
+            endCol--;
+        }
+    }
+
+    public static void main(String args[]){
+        int arr[][] = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16},
+        };
+
+        spiral(arr);
+    }
+}
+
+// DIAGONAL SUMS
+//1. NORMAL WAY
+
+public class JavaBasics{
+    public static void diagonalSum(int arr[][]){
+        int rows = arr.length;
+        int columns = arr[0].length;
+        int left = 0;
+        int right = 0;
+
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < columns; j++){
+                if(i == j){
+                    left += arr[i][j];
+                }
+                if(i + j == rows-1){
+                    right += arr[i][j];
+                }
+            }
+        }
+
+        System.out.println("Diganol Sum Left to Rigth = " + left);
+        System.out.println("Diganol Sum Rigth to Left = " + right);
+        System.out.println("Sum of Left & Rigth Diagonal = " + (left + right));
+    }
+
+    public static void main(String args[]){
+        int arr[][] = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16},
+        };
+
+        diagonalSum(arr);
+    }
+}
+
+// 2. FAST WAY
+public class JavaBasics{
+    public static void diagonalSum(int arr[][]){
+        int sum = 0;
+
+        for(int i = 0; i < arr.length; i++){
+            sum+= arr[i][i];
+            if(i != arr.length - i -1){
+                sum += arr[i][arr.length - i -1];
+            }
+        }
+
+        System.out.print("Diagonal Sum = " + sum);
+    }
+
+    public static void main(String args[]){
+        int arr[][] = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16},
+        };
+
+        diagonalSum(arr);
+    }
+}
+
+// SEARCH IN SORTED MATRIX
+// BRUTE FORCE && STAIRCASE
+
+public class JavaBasics{
+    public static boolean bruteForce(int arr[][], int key){
+        int rows = arr.length;
+        int columns = arr[0].length;
+
+        for(int i=0; i<rows; i++){
+            for(int j=0; j<columns; j++){
+                if(arr[i][j] == key){
+                    System.out.print(key + " Key is found at cell = " + "(" + i + "," + j + ")");
+                    return true;
+                }
+            }
+        }
+        System.out.print("Key is not found");
+        return false;
+    }
+
+    public static boolean binarySearch(int arr[][], int key){
+        int row = 0;
+        int columns = arr[0].length - 1;
+
+        while(row < arr.length && columns >= 0){
+            if(arr[row][columns] == key){
+                System.out.println("Key is at cell = " + "(" + row + "," + columns + ")");
+                return true;
+            }
+            else if(arr[row][columns] < key){
+                row++;
+            }
+            else if(arr[row][columns] > key){
+                columns--;
+            }
+        }
+
+        System.out.println("Key is not found");
+        return false;
+    }
+
+    public static void main(String args[]){
+        int arr[][] = {
+            {10, 20, 30, 40},
+            {15, 25, 35, 45},
+            {27, 29, 37, 48},
+            {32, 33, 39, 50},
+        };
+
+        int key = 33;
+
+        // bruteForce(arr, key);
+        binarySearch(arr,key);
+    }
+}
+

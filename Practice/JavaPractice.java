@@ -1528,86 +1528,210 @@
 //     }
 // }
 
-import java.util.*;
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static boolean search(int arr[][], int key){
+//         int rows = arr.length;
+//         int columns = arr[0]. length;
+
+//         for(int i=0; i<rows; i++){
+//             for(int j=0; j<columns; j++){
+//                 if(arr[i][j] == key){
+//                     System.out.print("Key is founded at cell = " + "(" + i + "," + j + ")");
+//                     return true;
+//                 }
+//             }
+//         }
+//         System.out.print("Key is not founded");
+//         return false;
+//     }
+
+//     public static int largest(int arr[][]){
+//         int rows = arr.length;
+//         int columns = arr[0].length;
+//         int largest = Integer.MIN_VALUE;
+
+//         for(int i=0; i<rows; i++){
+//             for(int j=0; j<columns; j++){
+//                 if(arr[i][j] > largest){
+//                     largest = arr[i][j];
+//                 }
+//             }
+//         }
+
+//         return largest;
+//     }
+
+//     public static int smallest(int arr[][]){
+//         int rows = arr.length;
+//         int columns = arr[0].length;
+//         int smallest = Integer.MAX_VALUE;
+
+//         for(int i=0; i<rows; i++){
+//             for(int j=0; j<columns; j++){
+//                 if(arr[i][j] < smallest){
+//                     smallest = arr[i][j];
+//                 }
+//             }
+//         }
+
+//         return smallest;
+//     }
+
+//     public static void main(String args[]){
+//         int arr[][] = new int[3][3];
+//         int rows = arr.length;
+//         int columns = arr[0].length; 
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter 2D Arrays Numbers(3x3) :- ");
+//         for(int i=0; i<rows; i++){
+//             for(int j=0; j<columns; j++){
+//                 arr[i][j] = sc.nextInt();
+//             }
+//         }
+//         // Seacrh Method
+//         System.out.print("Enter Key number :- ");
+//         int key = sc.nextInt();
+//         search(arr, key);
+
+//         System.out.println();
+
+//         // Largest Method
+//         System.out.print("Largest Numbers in 2D Arrays is = " + largest(arr));
+
+//         System.out.println();
+
+//         // Smallest Method
+//         System.out.print("Smallest Numbers in 2D Arrays is = " + smallest(arr));
+
+//     }
+// }
+
+// public class JavaPractice{
+//     public static void spiral(int arr[][]){
+//         int startRow = 0;
+//         int startCol = 0;
+//         int endRow = arr.length - 1;
+//         int endCol = arr[0].length - 1;
+
+//         while(startRow <= endRow && startCol <= endCol){
+//             //1st
+//             for(int i = startRow; i <= endRow; i++){
+//                 System.out.print(arr[startRow][i] + " ");
+//             }
+
+//             //2nd 
+//             for(int j = startCol + 1; j <= endCol; j++){
+//                 System.out.print(arr[j][endCol] + " ");
+//             }
+
+//             //3rd 
+//             for(int i = endRow - 1; i >= startRow; i--){
+//                 System.out.print(arr[endRow][i] + " ");
+//             }
+
+//             //4th 
+//             for(int j = endCol - 1; j > startCol; j--){
+//                 System.out.print(arr[j][startCol] + " ");
+//             }
+
+//             startRow++;
+//             startCol++;
+//             endRow--;
+//             endCol--;
+//         }
+//     }
+
+//     public static void main(String args[]){
+//         int arr[][] = {
+//             {1, 2, 3, 4},
+//             {5, 6, 7, 8},
+//             {9, 10, 11, 12},
+//             {13, 14, 15, 16},
+//         };
+
+//         spiral(arr);
+//     }
+// }
+
+
+// public class JavaPractice{
+//     public static void diagonalSum(int arr[][]){
+//         int sum = 0;
+
+//         for(int i = 0; i < arr.length; i++){
+//             sum+= arr[i][i];
+//             if(i != arr.length - i -1){
+//                 sum += arr[i][arr.length - i -1];
+//             }
+//         }
+
+//         System.out.print("Diagonal Sum = " + sum);
+//     }
+
+//     public static void main(String args[]){
+//         int arr[][] = {
+//             {1, 2, 3, 4},
+//             {5, 6, 7, 8},
+//             {9, 10, 11, 12},
+//             {13, 14, 15, 16},
+//         };
+
+//         diagonalSum(arr);
+//     }
+// }
 
 public class JavaPractice{
-    public static boolean search(int arr[][], int key){
+    public static boolean bruteForce(int arr[][], int key){
         int rows = arr.length;
-        int columns = arr[0]. length;
+        int columns = arr[0].length;
 
         for(int i=0; i<rows; i++){
             for(int j=0; j<columns; j++){
                 if(arr[i][j] == key){
-                    System.out.print("Key is founded at cell = " + "(" + i + "," + j + ")");
+                    System.out.print(key + " Key is found at cell = " + "(" + i + "," + j + ")");
                     return true;
                 }
             }
         }
-        System.out.print("Key is not founded");
+        System.out.print("Key is not found");
         return false;
     }
 
-    public static int largest(int arr[][]){
-        int rows = arr.length;
-        int columns = arr[0].length;
-        int largest = Integer.MIN_VALUE;
+    public static boolean binarySearch(int arr[][], int key){
+        int row = 0;
+        int columns = arr[0].length - 1;
 
-        for(int i=0; i<rows; i++){
-            for(int j=0; j<columns; j++){
-                if(arr[i][j] > largest){
-                    largest = arr[i][j];
-                }
+        while(row < arr.length && columns >= 0){
+            if(arr[row][columns] == key){
+                System.out.println("Key is at cell = " + "(" + row + "," + columns + ")");
+                return true;
+            }
+            else if(arr[row][columns] < key){
+                row++;
+            }
+            else if(arr[row][columns] > key){
+                columns--;
             }
         }
 
-        return largest;
-    }
-
-    public static int smallest(int arr[][]){
-        int rows = arr.length;
-        int columns = arr[0].length;
-        int smallest = Integer.MAX_VALUE;
-
-        for(int i=0; i<rows; i++){
-            for(int j=0; j<columns; j++){
-                if(arr[i][j] < smallest){
-                    smallest = arr[i][j];
-                }
-            }
-        }
-
-        return smallest;
+        System.out.println("Key is not found");
+        return false;
     }
 
     public static void main(String args[]){
-        int arr[][] = new int[3][3];
-        int rows = arr.length;
-        int columns = arr[0].length; 
-        Scanner sc = new Scanner(System.in);
+        int arr[][] = {
+            {10, 20, 30, 40},
+            {15, 25, 35, 45},
+            {27, 29, 37, 48},
+            {32, 33, 39, 50},
+        };
 
-        System.out.print("Enter 2D Arrays Numbers(3x3) :- ");
-        for(int i=0; i<rows; i++){
-            for(int j=0; j<columns; j++){
-                arr[i][j] = sc.nextInt();
-            }
-        }
-        // Seacrh Method
-        System.out.print("Enter Key number :- ");
-        int key = sc.nextInt();
-        search(arr, key);
+        int key = 33;
 
-        System.out.println();
-
-        // Largest Method
-        System.out.print("Largest Numbers in 2D Arrays is = " + largest(arr));
-
-        System.out.println();
-
-        // Smallest Method
-        System.out.print("Smallest Numbers in 2D Arrays is = " + smallest(arr));
-
+        // bruteForce(arr, key);
+        binarySearch(arr,key);
     }
 }
-
-// SPIRAL MATRIX
-
