@@ -1824,3 +1824,34 @@
 // }
 
 
+// public class JavaPractice{
+//     public static void main(String args[]){
+//         String s1 = "Kapil";
+//         String s2 = "Kapil";
+//         String s3 = new String("Kapil");
+
+//         // 1st case (Equal to)
+//         if(s1 == s2){
+//             System.out.println("Strings are equal");
+//         }
+//         else{
+//             System.out.println("Strings are not equal");
+//         }
+
+//         // 2nd case (Not Equal to)
+//         if(s1 == s3){
+//             System.out.println("Strings are equal");
+//         }
+//         else{
+//             System.out.println("Strings are not equal");
+//         }
+
+//         // 3rd case (Equal to)
+//         if(s1.equals(s3)){
+//             System.out.println("Strings are equal");
+//         }
+//         else{
+//             System.out.println("Strings are not equal");
+//         }
+//     }
+// }
