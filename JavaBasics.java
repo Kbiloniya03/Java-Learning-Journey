@@ -2765,3 +2765,212 @@ public class JavaBasics{
     }
 }
 
+// Practice Question
+
+// 1.
+
+public class JavaBasics{
+    public static void count(int arr[][], int key){
+        int count = 0;
+
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[0].length; j++){
+                if(arr[i][j] == key){
+                    count++;
+                }
+            }
+        }
+
+        System.out.println(count);
+    }
+
+    public static void main(String args[]){
+        int arr[][] = {
+            {4, 7, 8},
+            {8, 8, 7},
+        };
+
+        int key = 7;
+
+        count(arr, key);
+    }
+}
+
+// 2.
+
+public class JavaBasics{
+    public static void sum(int arr[][]){
+        int sum = 0;
+        for(int i = 1; i > 0; i--){
+            for(int j = 0; j < arr[0].length; j++){
+                sum += arr[i][j];
+            }
+        }
+        System.out.println("Sum is = " + sum);
+    }
+
+    public static void main(String args[]){
+        int arr[][] = {
+            {1, 4, 9},
+            {11, 4, 3},
+            {2, 2, 3},
+        };
+
+        sum(arr);
+    }
+}
+
+// 3. 
+
+public class JavaBasics{
+    public static void swapArray(int arr[][]){
+        int row = arr.length;
+        int column = arr[0].length;
+        int[][] transpose = new int [column][row];
+        for(int i=0; i<row; i++){
+            for(int j=0; j<column; j++){
+                transpose[j][i] =arr[i][j];
+             }
+        }
+
+        for(int i=0; i<transpose.length; i++){
+            for(int j=0; j<transpose[0].length; j++){
+                System.out.print(transpose[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String args[]){
+        int arr[][] = {
+            {11, 12, 13},
+            {21, 22, 23},
+        };
+
+        swapArray(arr);
+    }
+}
+
+// STRINGS
+
+// INPUT AND OUTPUT
+
+// next();
+
+import java.util.*;
+
+public class JavaBasics{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String name = sc.next();
+
+        System.out.print("Name = " + name);
+    }
+}
+
+// nextLine();
+
+import java.util.*;
+
+public class JavaBasics{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String fullName = sc.nextLine();
+
+        System.out.print("Full Name = " + fullName);
+    }
+}
+
+// STRINGS LENGTH METHOD
+
+public class JavaBasics{
+    public static void main(String args[]){
+        String fullName = "Kapil Biloniya";
+
+        System.out.print("Length of Strings is = " + fullName + " = " + fullName.length());
+    }
+}
+
+// STRINGS CONCETENATE
+
+public class JavaBasics{
+    public static void main(String args[]){
+        String firstName = "Kapil";
+        String lastName = "Biloniya";
+        String fullName = firstName + " " + lastName;
+
+        System.out.println(fullName);
+    }
+}
+
+// STRINGS CHARAT() METHOD
+
+public class JavaBasics{
+    public static void main(String args[]){
+        String name = "Kapil Biloniya";
+        for(int i=0; i<name.length(); i++){
+            System.out.print(name.charAt(i));
+        }
+    }
+}
+
+// CHECK IF STRINGS IS PALINDROME OR NOT
+
+public class JavaBasics{
+    public static boolean isPalindrome(String word){
+       int n = word.length();
+
+        for(int i = 0; i < n/2; i++){
+            if(word.charAt(i) != word.charAt(n - i -1)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String args[]){
+        String word = "racecar";
+        System.out.print(isPalindrome(word));
+    }
+}
+
+// SHORTEST PATH 
+
+import java.util.*;
+
+public class JavaBasics{
+    public static float shortestPath(String path){
+        int x = 0;
+        int y = 0;
+       
+       for(int i = 0; i < path.length(); i++){
+        //North
+        if(path.charAt(i) == 'N'){
+            y++;
+        }
+        //East
+        else if(path.charAt(i) == 'E'){
+            x++;
+        }
+        //South
+        else if(path.charAt(i) == 'S'){
+            y--;
+        }
+        //West
+        else{
+            x--;
+        }
+       }
+
+       int x2 = x*x;
+       int y2 = y*y;
+
+       return (float) Math.sqrt(x2 + y2);
+    }
+
+    public static void main(String args[]){
+        String path = "WNEENESENNN";
+        System.out.print("Shortest Path = " + shortestPath(path));
+        
+    }
+}

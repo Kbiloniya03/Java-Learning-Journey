@@ -1683,55 +1683,144 @@
 //     }
 // }
 
-public class JavaPractice{
-    public static boolean bruteForce(int arr[][], int key){
-        int rows = arr.length;
-        int columns = arr[0].length;
+// public class JavaPractice{
+//     public static boolean bruteForce(int arr[][], int key){
+//         int rows = arr.length;
+//         int columns = arr[0].length;
 
-        for(int i=0; i<rows; i++){
-            for(int j=0; j<columns; j++){
-                if(arr[i][j] == key){
-                    System.out.print(key + " Key is found at cell = " + "(" + i + "," + j + ")");
-                    return true;
-                }
-            }
-        }
-        System.out.print("Key is not found");
-        return false;
-    }
+//         for(int i=0; i<rows; i++){
+//             for(int j=0; j<columns; j++){
+//                 if(arr[i][j] == key){
+//                     System.out.print(key + " Key is found at cell = " + "(" + i + "," + j + ")");
+//                     return true;
+//                 }
+//             }
+//         }
+//         System.out.print("Key is not found");
+//         return false;
+//     }
 
-    public static boolean binarySearch(int arr[][], int key){
-        int row = 0;
-        int columns = arr[0].length - 1;
+//     public static boolean binarySearch(int arr[][], int key){
+//         int row = 0;
+//         int columns = arr[0].length - 1;
 
-        while(row < arr.length && columns >= 0){
-            if(arr[row][columns] == key){
-                System.out.println("Key is at cell = " + "(" + row + "," + columns + ")");
-                return true;
-            }
-            else if(arr[row][columns] < key){
-                row++;
-            }
-            else if(arr[row][columns] > key){
-                columns--;
-            }
-        }
+//         while(row < arr.length && columns >= 0){
+//             if(arr[row][columns] == key){
+//                 System.out.println("Key is at cell = " + "(" + row + "," + columns + ")");
+//                 return true;
+//             }
+//             else if(arr[row][columns] < key){
+//                 row++;
+//             }
+//             else if(arr[row][columns] > key){
+//                 columns--;
+//             }
+//         }
 
-        System.out.println("Key is not found");
-        return false;
-    }
+//         System.out.println("Key is not found");
+//         return false;
+//     }
 
-    public static void main(String args[]){
-        int arr[][] = {
-            {10, 20, 30, 40},
-            {15, 25, 35, 45},
-            {27, 29, 37, 48},
-            {32, 33, 39, 50},
-        };
+//     public static void main(String args[]){
+//         int arr[][] = {
+//             {10, 20, 30, 40},
+//             {15, 25, 35, 45},
+//             {27, 29, 37, 48},
+//             {32, 33, 39, 50},
+//         };
 
-        int key = 33;
+//         int key = 33;
 
-        // bruteForce(arr, key);
-        binarySearch(arr,key);
-    }
-}
+//         // bruteForce(arr, key);
+//         binarySearch(arr,key);
+//     }
+// }
+
+// public class JavaPractice{
+//     public static void swapArray(int arr[][]){
+//         int row = arr.length;
+//         int column = arr[0].length;
+//         int[][] transpose = new int [column][row];
+//         for(int i=0; i<row; i++){
+//             for(int j=0; j<column; j++){
+//                 transpose[j][i] =arr[i][j];
+//              }
+//         }
+
+//         for(int i=0; i<transpose.length; i++){
+//             for(int j=0; j<transpose[0].length; j++){
+//                 System.out.print(transpose[i][j] + " ");
+//             }
+//             System.out.println();
+//         }
+//     }
+
+//     public static void main(String args[]){
+//         int arr[][] = {
+//             {11, 12, 13},
+//             {21, 22, 23},
+//         };
+
+//         swapArray(arr);
+//     }
+// }
+
+
+// public class JavaPractice{
+//     public static boolean isPalindrome(String word){
+//        int n = word.length();
+
+//         for(int i = 0; i < n/2; i++){
+//             if(word.charAt(i) != word.charAt(n - i -1)){
+//                 return false;
+//             }
+//         }
+//         return true;
+//     }
+
+//     public static void main(String args[]){
+//         String word = "racecar";
+//         System.out.print(isPalindrome(word));
+//     }
+// }
+
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static float shortestPath(String path){
+//         int x = 0;
+//         int y = 0;
+       
+//        for(int i = 0; i < path.length(); i++){
+//         //North
+//         if(path.charAt(i) == 'N'){
+//             y++;
+//         }
+//         //East
+//         else if(path.charAt(i) == 'E'){
+//             x++;
+//         }
+//         //South
+//         else if(path.charAt(i) == 'S'){
+//             y--;
+//         }
+//         //West
+//         else{
+//             x--;
+//         }
+//        }
+
+//        int x2 = x*x;
+//        int y2 = y*y;
+
+//        return (float) Math.sqrt(x2 + y2);
+//     }
+
+//     public static void main(String args[]){
+//         String path = "WNEENESENNN";
+//         System.out.print("Shortest Path = " + shortestPath(path));
+        
+//     }
+// }
+
+
