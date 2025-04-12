@@ -3081,3 +3081,71 @@ public class JavaBasics{
 
 // CONVERT LETTER TO UPPERCASE
 
+public class JavaPractice {
+    public static String toUpperCase(String str) {
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < str.length(); i++) {
+            char ch = Character.toUpperCase(str.charAt(i));
+            sb.append(ch);
+        }
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        String str = "Hello world";
+        String result = toUpperCase(str);
+        System.out.println(result);  // Output: HELLO WORLD
+    }
+}
+
+// CONVERT LETTER TO LOWERCASE
+
+public class JavaBasics {
+    public static String toLowerCase(String str) {
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < str.length(); i++) {
+            char ch = Character.toLowerCase(str.charAt(i));
+            sb.append(ch);
+        }
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        String str = "HELLO WORLD";
+        String result = toLowerCase(str);
+        System.out.println(result);  // Output: hello world
+    }
+}
+
+// CREATE A CAPITAL CASE METHOD 
+// INPUT = hello world, i am learning java TO,
+// OUTPUR = Hello World, I Am Learing Java 
+
+public class JavaBasics {
+    public static String toCapitalCase(String str) {
+        StringBuilder sb = new StringBuilder();
+        char ch = Character.toUpperCase(str.charAt(0));
+        sb.append(ch);
+
+        for(int i = 1; i < str.length(); i++){
+            if(str.charAt(i) == ' '){
+                sb.append(str.charAt(i));
+                i++;
+                sb.append(Character.toUpperCase(str.charAt(i)));
+            }
+            else{
+                sb.append(str.charAt(i));
+            }
+        }
+       return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        String str = "hello world, i am learning java";
+        String result = toCapitalCase(str);
+        System.out.println(result);  // Output: Hi. I Am Kapil
+    }
+}
+
+// STRING COMPRESSION
+

@@ -1873,34 +1873,59 @@
 //     }
 // }
 
-public class JavaPractice {
-    public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder("Hello");
+// public class JavaPractice {
+//     public static void main(String[] args) {
+//         StringBuilder sb = new StringBuilder("Hello");
 
-        sb.append(" World");            
-        System.out.println(sb.toString());
-        //Output = "Hello World"
+//         sb.append(" World");            
+//         System.out.println(sb.toString());
+//         //Output = "Hello World"
 
-        sb.insert(5, ",");             
-        System.out.println(sb.toString());
-        //Output = "Hello, World"
+//         sb.insert(5, ",");             
+//         System.out.println(sb.toString());
+//         //Output = "Hello, World"
 
-        sb.replace(7, 12, "Java");     
-        System.out.println(sb.toString());
-        //Output = "Hello, Java  "
+//         sb.replace(7, 12, "Java");     
+//         System.out.println(sb.toString());
+//         //Output = "Hello, Java  "
 
-        sb.reverse();                  
-        System.out.println(sb.toString());
-        //Output = "avaJ ,oellH"
+//         sb.reverse();                  
+//         System.out.println(sb.toString());
+//         //Output = "avaJ ,oellH"
 
-        sb.delete(0, 5);                
-        System.out.println(sb.toString());
-        //Output = ",oellH"
+//         sb.delete(0, 5);                
+//         System.out.println(sb.toString());
+//         //Output = ",oellH"
 
-        sb.reverse();                   
-        System.out.println(sb.toString());
-        //Output = "Hello,"
-    }
-}
+//         sb.reverse();                   
+//         System.out.println(sb.toString());
+//         //Output = "Hello,"
+//     }
+// }
 
+// public class JavaPractice {
+//     public static String toCapitalCase(String str) {
+//         StringBuilder sb = new StringBuilder();
+//         char ch = Character.toUpperCase(str.charAt(0));
+//         sb.append(ch);
+
+//         for(int i = 1; i < str.length(); i++){
+//             if(str.charAt(i) == ' '){
+//                 sb.append(str.charAt(i));
+//                 i++;
+//                 sb.append(Character.toUpperCase(str.charAt(i)));
+//             }
+//             else{
+//                 sb.append(str.charAt(i));
+//             }
+//         }
+//        return sb.toString();
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "hi, i am kapil";
+//         String result = toCapitalCase(str);
+//         System.out.println(result);  // Output: Hi. I Am Kapil
+//     }
+// }
 
