@@ -1855,3 +1855,52 @@
 //         }
 //     }
 // }
+
+
+// public class JavaPractice{
+//     public static String subString(String str, int si, int ei){
+//         String subStr = "";
+//         for(int i = si; i < ei; i++){
+//             subStr += str.charAt(i);
+//         }
+//         return subStr;
+//     }
+
+//     public static void main(String args[]){
+//         String str = "HelloWorld";
+//         System.out.println(subString(str, 0, 5));
+
+//     }
+// }
+
+public class JavaPractice {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("Hello");
+
+        sb.append(" World");            
+        System.out.println(sb.toString());
+        //Output = "Hello World"
+
+        sb.insert(5, ",");             
+        System.out.println(sb.toString());
+        //Output = "Hello, World"
+
+        sb.replace(7, 12, "Java");     
+        System.out.println(sb.toString());
+        //Output = "Hello, Java  "
+
+        sb.reverse();                  
+        System.out.println(sb.toString());
+        //Output = "avaJ ,oellH"
+
+        sb.delete(0, 5);                
+        System.out.println(sb.toString());
+        //Output = ",oellH"
+
+        sb.reverse();                   
+        System.out.println(sb.toString());
+        //Output = "Hello,"
+    }
+}
+
+

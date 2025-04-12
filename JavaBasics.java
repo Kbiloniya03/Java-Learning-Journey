@@ -3008,3 +3008,76 @@ public class JavaBasics{
         }
     }
 }
+
+// STRING FUNCTION SUBSTRING
+
+public class JavaBasics{
+    public static String subString(String str, int si, int ei){
+        String subStr = "";
+        for(int i = si; i < ei; i++){
+            subStr += str.charAt(i);
+        }
+        return subStr;
+    }
+
+    public static void main(String args[]){
+        String str = "HelloWorld";
+        System.out.println(subString(str, 0, 5));
+
+    }
+}
+
+// PRINT LARGEST STRING
+// str1.compareTo(str2);
+// str1.compareToIgnoreCase(str2);
+
+public class JavaPractice{
+    public static void main(String args[]){
+        String fruits[] = {"apple", "mango", "banana"};
+        String largest = fruits[0];
+        
+        for(int i = 1; i < fruits.length; i++){
+            if(largest.compareTo(fruits[i]) < 0){
+                largest = fruits[i];
+            }
+        }
+
+        System.out.println(largest);
+    }
+}
+
+// STRING BUILDER
+// METHODS
+
+public class JavaBasics{
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("Hello");
+
+        sb.append(" World");            
+        System.out.println(sb.toString());
+        //Output = "Hello World"
+
+        sb.insert(5, ",");             
+        System.out.println(sb.toString());
+        //Output = "Hello, World"
+
+        sb.replace(7, 12, "Java");     
+        System.out.println(sb.toString());
+        //Output = "Hello, Java  "
+
+        sb.reverse();                  
+        System.out.println(sb.toString());
+        //Output = "avaJ ,oellH"
+
+        sb.delete(0, 5);                
+        System.out.println(sb.toString());
+        //Output = ",oellH"
+
+        sb.reverse();                   
+        System.out.println(sb.toString());
+        //Output = "Hello,"
+    }
+}
+
+// CONVERT LETTER TO UPPERCASE
+
