@@ -1996,4 +1996,88 @@
 //     }
 // }
 
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static String tolowercase(String str){
+//         StringBuilder sb = new StringBuilder();
+//         int n = str.length();
+
+//         for(int i=0; i<n; i++){
+//             char ch = Character.toLowerCase(str.charAt(i));
+//             sb.append(ch);
+//         }
+
+//         return sb.toString();
+//     }
+
+//     public static char[] stringToCharArray(String str){
+//         char charArray[] = new char[str.length()];
+
+//         for(int i = 0; i < charArray.length; i++){
+//             charArray[i] = str.charAt(i);
+//         }
+
+//         return charArray;
+//     }
+
+//     public static void sortArray(char arr[]){
+//         for(int i = 0; i < arr.length - 1; i++){
+//             for(int j = 0; j < arr.length - i - 1; j++){
+//                 if(arr[j] > arr[j + 1]){
+//                     char temp = arr[j];
+//                     arr[j] = arr[j + 1];
+//                     arr[j + 1] = temp;
+//                 }
+//             }
+//         }
+//     }
+
+//     public static boolean arraysEqualTo(char[] arr1, char[] arr2) {
+//         if (arr1.length != arr2.length) return false;
+
+//         for (int i = 0; i < arr1.length; i++) {
+//             if (arr1[i] != arr2[i]) return false;
+//         }
+        
+//         return true;
+//     }    
+
+//     public static void isAnagram(String str1, String str2){
+//         str1 = tolowercase(str1);
+//         str2 = tolowercase(str2);
+
+//         if(str1.length() == str2.length()){
+//             char arr1[] = stringToCharArray(str1);
+//             char arr2[] = stringToCharArray(str2);
+
+//             sortArray(arr1);
+//             sortArray(arr2);
+
+//             boolean result = arraysEqualTo(arr1, arr2);
+
+//             if(result){
+//                 System.out.println(str1 + " and " + str2 + " are anagrams of each other");
+//             }
+//             else{
+//                 System.out.println(str1 + " and " + str2 + " are not anagrams of each other");
+//             }
+//         }
+//         else{
+//             System.out.println(str1 + " and " + str2 + " are not anagrams of each other");
+//         }        
+//     }
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+
+//         //Input String 1 and 2 from user
+//         System.out.print("Enter 1st String:- ");
+//         String str1 = sc.nextLine();
+//         System.out.print("Enter 2nd String:- ");
+//         String str2 = sc.nextLine();
+//         sc.close();
+
+//         isAnagram(str1, str2);
+//     }
+// }
 

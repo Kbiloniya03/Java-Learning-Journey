@@ -3220,3 +3220,103 @@ public class JavaBasics{
         isAnagram(str1, str2);
     }
 }
+
+//I BUILD THIS SAME CODE FROM SCRATCH
+
+import java.util.*;
+
+public class JavaBasics{
+
+    // Convert all characters of a string to lowercase
+    public static String toLowerCase(String str) {
+        StringBuilder sb = new StringBuilder();
+        int n = str.length();
+
+        for (int i = 0; i < n; i++) {
+            char ch = Character.toLowerCase(str.charAt(i));
+            sb.append(ch);
+        }
+
+        return sb.toString();
+    }
+
+    // Convert a string to a character array manually
+    public static char[] stringToCharArray(String str) {
+        char[] charArray = new char[str.length()];
+
+        for (int i = 0; i < charArray.length; i++) {
+            charArray[i] = str.charAt(i);
+        }
+
+        return charArray;
+    }
+
+    // Sort a character array using Bubble Sort (good for learning)
+    public static void sortArray(char[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Swap elements
+                    char temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    // Compare two character arrays for equality
+    public static boolean areArraysEqual(char[] arr1, char[] arr2) {
+        if (arr1.length != arr2.length) return false;
+
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] != arr2[i]) return false;
+        }
+
+        return true;
+    }
+
+    // Check if two strings are anagrams
+    public static void isAnagram(String str1, String str2) {
+        // Convert both strings to lowercase for case-insensitive comparison
+        str1 = toLowerCase(str1);
+        str2 = toLowerCase(str2);
+
+        if (str1.length() == str2.length()) {
+            // Convert strings to char arrays
+            char[] arr1 = stringToCharArray(str1);
+            char[] arr2 = stringToCharArray(str2);
+
+            // Sort both arrays
+            sortArray(arr1);
+            sortArray(arr2);
+
+            // Check if sorted arrays are equal
+            boolean result = areArraysEqual(arr1, arr2);
+
+            if (result) {
+                System.out.println(str1 + " and " + str2 + " are anagrams of each other");
+            } else {
+                System.out.println(str1 + " and " + str2 + " are not anagrams of each other");
+            }
+        } else {
+            System.out.println(str1 + " and " + str2 + " are not anagrams of each other");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input strings from user
+        System.out.print("Enter 1st String: ");
+        String str1 = sc.nextLine();
+
+        System.out.print("Enter 2nd String: ");
+        String str2 = sc.nextLine();
+
+        sc.close();  // Close scanner after input
+
+        // Check if input strings are anagrams
+        isAnagram(str1, str2);
+    }
+}
