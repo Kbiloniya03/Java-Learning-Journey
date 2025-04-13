@@ -1929,3 +1929,71 @@
 //     }
 // }
 
+// import java.util.*;
+
+// public class JavaPractice{
+//     public static int countSmallCaseVowels(String str){
+//         int n = str.length();
+//         int count = 0;
+
+//         for(int i = 0; i < n; i++){
+//             if(
+//                 str.charAt(i) == 'a' ||
+//                 str.charAt(i) == 'e' ||
+//                 str.charAt(i) == 'i' ||
+//                 str.charAt(i) == 'o' ||
+//                 str.charAt(i) == 'u' 
+//             ){
+//                 count++;
+//             }
+//         }
+
+//         return count;
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Your Word or Sentence:- ");
+//         String str = sc.nextLine();
+//         System.out.println(countSmallCaseVowels(str));
+//         sc.close();
+//     }
+// }
+
+// import java.util.Arrays;
+
+// public class JavaPractice{
+//     public static void isAnagram(String str1, String str2){
+//        str1 = str1.toLowerCase();
+//        str2 = str2.toLowerCase();
+
+//        if(str1.length() == str2.length()){
+//         //Convert string to char array
+//         char[] str1charArray = str1.toCharArray();
+//         char[] str2charArray = str2.toCharArray();
+
+//         //Sort the char array
+//         Arrays.sort(str1charArray);
+//         Arrays.sort(str2charArray);
+
+//         //Checking if both are equal or not
+//         boolean result = Arrays.equals(str1charArray, str2charArray);
+//         if(result){
+//             System.out.println(str1 + " and " + str2 + " are anagrams of each other");
+//         }
+//         else{
+//             System.out.println(str1 + " and " + str2 + " are not anagrams of each other");
+//         }
+//        }
+
+
+//     }
+//     public static void main(String args[]){
+//         String str1 = "race";
+//         String str2 = "care";
+
+//         isAnagram(str1, str2);
+//     }
+// }
+
+
