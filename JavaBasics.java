@@ -3348,3 +3348,50 @@ public class JavaBasics{
     }
 }
 
+// BIT MANIPULATION
+// BIT OPERATORS
+
+// 1. BINARY AND &
+
+public class JavaBasics{
+    public static void main(String args[]){
+        int a = 5; // 101
+        int b = 3; //  11
+        System.err.println((a & b)); // Output 001
+    }
+}
+
+// 2. BINARY OR |
+
+public class JavaBasics{
+    public static void main(String args[]){
+        int a = 5; // 101
+        int b = 3; //  11
+        System.err.println((a | b)); // Output 111
+    }
+}
+
+// 3. BINARY XOR ^
+
+public class JavaBasics{
+    public static void main(String args[]){
+        int a = 5; // 101
+        int b = 3; //  11
+        System.err.println((a ^ b)); // Output 110
+    }
+}
+
+// 4. BINARY ONE'S COMPLEMENT ~
+
+public class JavaBasics{
+    public static void main(String args[]){
+        int a = 5; // 00000101
+        System.err.println(~a); // Output 00000110 -> 6 -> -6
+    }
+}
+
+// 5. BINARY LEFT SHIFT <<
+
+
+// 6. BINARY RIGHT SHIFT >>
+
