@@ -3392,6 +3392,13 @@ public class JavaBasics{
 
 // 5. BINARY LEFT SHIFT <<
 
+public class JavaBasics{
+    public static void main(String args[]){
+        int a = 5; // 00000101
+        int b = 2; 
+        System.err.println(a << b); // Output 00010100 -> 20
+    }
+}
 
 // 6. BINARY RIGHT SHIFT >>
 

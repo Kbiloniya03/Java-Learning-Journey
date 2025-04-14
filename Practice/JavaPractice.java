@@ -2111,7 +2111,8 @@
 
 public class JavaPractice{
     public static void main(String args[]){
-        int a = 5; // 00000101
-        System.err.println(~a); // Output 00000110
+        int a = -10; // 00000110
+        int b = 2; 
+        System.err.println(a >> b); // Output 00010100 -> 20
     }
 }
