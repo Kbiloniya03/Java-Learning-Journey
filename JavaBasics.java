@@ -3609,3 +3609,85 @@ public class JavaPractice{
 
     }
 }   
+
+// OOPS (OBJECT ORIENTED PROGRAMMING)
+
+// CLASSES
+
+class Students {
+    // Properties / Variables (data)
+    String name;
+    int age;
+    int marks;
+
+    // Setter Methods 
+    void setName(String newName) {
+        name = newName;
+    }
+
+    void setAge(int newAge) {
+        age = newAge;
+    }
+
+    void setMarks(int newMarks) {
+        marks = newMarks;
+    }
+
+    // Method to check if the student passed using the class's marks variable
+    boolean isPass() {
+        if (marks < 33) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+
+// OBJECT
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        // Create a student object
+        Students s1 = new Students();
+
+        // Set values
+        s1.setName("Ravi");
+        s1.setAge(16);
+        s1.setMarks(75);
+
+        // Print student details
+        System.out.println("Name  : " + s1.name);
+        System.out.println("Age   : " + s1.age);
+        System.out.println("Marks : " + s1.marks);
+
+        // Check and print result
+        if (s1.isPass()) {
+            System.out.println("Result: Pass");
+        } else {
+            System.out.println("Result: Fail");
+        }
+    }
+}
+
+
+// ACCESS MODIFIERS
+
+// PRIVATE & PUBLIC
+
+public class JavaBasics{
+    public static void main(String args[]){
+        BankAccount bankAcc = new BankAccount();
+        bankAcc.showBalance();
+    }
+}
+
+class BankAccount {
+    private int balance = 5000;
+
+    public void showBalance(){
+        System.out.println("Balance = " + balance);
+    }
+}
+
+// DEFAULT & PROTECTED
+
