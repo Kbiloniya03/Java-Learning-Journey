@@ -2109,10 +2109,42 @@
 // }
 
 
+// public class JavaPractice{
+//     public static int countSetInBit(int n){
+//       int count = 0;
+//       while (n > 0) {
+//         if((n & 1) == 1){
+//             count++;
+//         }
+//         n = n >> 1;
+//       }
+
+//       return count;
+//     }
+//     public static void main(String args[]){
+//         int n = 21;
+//         System.out.println(countSetInBit(n));
+
+//     }
+// }   
+
 public class JavaPractice{
-    public static void main(String args[]){
-        int a = -10; // 00000110
-        int b = 2; 
-        System.err.println(a >> b); // Output 00010100 -> 20
+    public static int fastExpo(int a, int n){
+      int ans = 1;
+      while(n > 0){
+        if((n &1) != 0){
+            ans = ans * a;
+        }
+
+        a = a * a;
+        n = n >> 1;
+      }
+      return ans;
     }
-}
+    public static void main(String args[]){
+        int n = 5;
+        int a = 3;
+        System.out.println(fastExpo(a, n));
+
+    }
+}   

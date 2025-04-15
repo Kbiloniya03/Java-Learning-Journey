@@ -3402,3 +3402,210 @@ public class JavaBasics{
 
 // 6. BINARY RIGHT SHIFT >>
 
+public class JavaPractice{
+    public static void main(String args[]){
+        int a = 6; // 00000110
+        int b = 1; 
+        System.err.println(a >> b); // Output 00000011 -> 3
+    }
+}
+
+// CHECK IF NUM IS ODD OR EVEN
+
+public class JavaBasics{
+    public static void oddOrEven(int n){
+        int bitMask = (n & 1);
+        if(bitMask == 0){
+            System.out.println("Number is Even");
+        }
+        else{
+            System.out.println("Number is Odd");
+        }
+    }
+    public static void main(String args[]){
+        int n = 10;
+        oddOrEven(n);
+
+    }
+}
+
+// GET ITH BIT
+
+public class JavaBasics{
+    public static int getIthBit(int n, int i){
+       int bitMask = (n >> i);
+       if((bitMask & 1) == 1){
+        return 1;
+       }
+       else{
+        return 0;
+       }
+    }
+    public static void main(String args[]){
+        int n = 10;
+        int i = 3;
+        System.out.println(getIthBit(n, i));
+
+    }
+}
+
+// SET ITH BIT
+
+public class JavaBasics{
+    public static int setIthBit(int n, int i){
+       int bitMask = 1 << i;
+       return (n | bitMask);
+    }
+    public static void main(String args[]){
+        int n = 10;
+        int i = 2;
+        System.out.println(setIthBit(n, i));
+
+    }
+}
+
+// TOGGLE ITH BIT
+
+public class JavaPractice{
+    public static int toggleIthBit(int n, int i){
+       int bitMask = 1 << i;
+       return (n ^ bitMask);
+    }
+    public static void main(String args[]){
+        int n = 26;
+        int i = 3;
+        System.out.println(toggleIthBit(n, i));
+
+    }
+}
+
+// CLEAR ITH BIT
+
+public class JavaBasics{
+    public static int clearIthBit(int n, int i){
+       int bitMask = ~(1 << i);
+       return (n & bitMask);
+    }
+    public static void main(String args[]){
+        int n = 11;
+        int i = 3;
+        System.out.println(clearIthBit(n, i));
+
+    }
+}   
+
+// UPDATE ITH BIT
+
+public class JavaBasics{
+    public static int updateIthBit(int n, int i, int newBit){
+       if(newBit == 0){
+        int bitMask = ~(1 << i);
+        return (n & bitMask);
+       }
+       else if(newBit == 1){
+        int bitMask = 1 << i;
+        return (n | bitMask);
+       }
+       else{
+        return -1;
+       }
+    }
+    public static void main(String args[]){
+        int n = 21;
+        int i = 1;
+        int newBit = 1;
+        System.out.println(updateIthBit(n, i, newBit));
+
+    }
+}   
+
+// CLEAR LAST ITH BIT
+
+public class JavaBasics{
+    public static int clearLastIthBit(int n, int i){
+      int bitMask = -1 << i;
+      return (n & bitMask);
+    }
+    public static void main(String args[]){
+        int n = 15;
+        int i = 2;
+        System.out.println(clearLastIthBit(n, i));
+
+    }
+}   
+
+// CLEAR ITH TO JTH RANGE BIT
+
+public class JavaBasics{
+    public static int clearRangeBit(int n, int i, int j){
+      int a = -1 << (j+1);
+      int b = (1 << i) - 1;
+      int bitMask = a | b;
+      return n & bitMask;
+    }
+    public static void main(String args[]){
+        int n = 10;
+        int i = 2;
+        int j = 4;
+        System.out.println(clearRangeBit(n, i, j));
+
+    }
+}   
+
+// CHECK IF IT IS POWER OF 2
+
+public class JavaBasics{
+    public static boolean isPowerOfTwo(int n){
+      boolean result = (n & (n - 1)) == 0;
+      return result;
+    }
+    public static void main(String args[]){
+        int n = 8;
+        System.out.println(isPowerOfTwo(n));
+
+    }
+}
+
+// COUNT SET BIT IN A NUMBER
+
+public class JavaBasics{
+    public static int countSetInBit(int n){
+      int count = 0;
+      while (n > 0) {
+        if((n & 1) == 1){
+            count++;
+        }
+        n = n >> 1;
+      }
+
+      return count;
+    }
+    public static void main(String args[]){
+        int n = 21;
+        System.out.println(countSetInBit(n));
+
+    }
+}   
+
+// FAST EXPONENTIATION
+
+public class JavaPractice{
+    public static int fastExpo(int a, int n){
+      int ans = 1;
+      while(n > 0){
+        if((n &1) != 0){
+            ans = ans * a;
+        }
+
+        a = a * a;
+        n = n >> 1;
+      }
+      return ans;
+    }
+    public static void main(String args[]){
+        int n = 5;
+        int a = 3;
+        System.out.println(fastExpo(a, n));
+
+    }
+}   
