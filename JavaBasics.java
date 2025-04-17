@@ -4111,3 +4111,138 @@ public class JavaBasics{
 
 // INTERFACE
 
+// Step 1: Create the Interface
+interface Vehicle {
+    void start();      // abstract method
+    void stop();       // abstract method
+    int getSpeed();    // abstract method
+}
+
+// Step 2: Implementing the Interface in the Car class
+class Car implements Vehicle {
+    int speed;
+
+    public void start() {
+        speed = 50;
+        System.out.println("Car started.");
+    }
+
+    public void stop() {
+        speed = 0;
+        System.out.println("Car stopped.");
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+}
+
+// Step 3: Implementing the Interface in the Bike class
+class Bike implements Vehicle {
+    int speed;
+
+    public void start() {
+        speed = 30;
+        System.out.println("Bike started.");
+    }
+
+    public void stop() {
+        speed = 0;
+        System.out.println("Bike stopped.");
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+}
+
+// Step 4: Test in main method
+public class JavaBasics {
+    public static void main(String args[]) {
+        Car myCar = new Car();   // Interface reference to Car object
+        myCar.start();
+        System.out.println("Car Speed: " + myCar.getSpeed());
+        myCar.stop();
+
+        System.out.println();
+
+        Bike myBike = new Bike(); // Interface reference to Bike object
+        myBike.start();
+        System.out.println("Bike Speed: " + myBike.getSpeed());
+        myBike.stop();
+    }
+}
+
+
+// STATIC KEYWORD
+
+class Student {
+    String name;
+    int rollNo;
+    static String schoolName;
+
+    Student(String name, int rollNo) {
+        this.name = name;
+        this.rollNo = rollNo;
+    }
+
+    void display() {
+        System.out.println(name + " - " + rollNo + " - " + schoolName);
+    }
+}
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        Student.schoolName = "Ramjas No 5";  // Set static variable using class name
+
+        Student stu1 = new Student("Aman", 101);
+        Student stu2 = new Student("Neha", 102);
+
+        stu1.display();  // Aman - 101 - Ramjas No 5
+        stu2.display();  // Neha - 102 - Ramjas No 5
+    }
+}
+
+// SUPER KEYWORD
+
+class Parent {
+    String name;
+
+    // Parameterized constructor
+    Parent(String name) {
+        this.name = name;
+        System.out.println("Parent Constructor Called with name: " + name);
+    }
+
+    void display() {
+        System.out.println("Name from Parent: " + name);
+    }
+}
+
+class Child extends Parent {
+
+    int age;
+
+    // Child constructor calling parent constructor using super
+    Child(String name, int age) {
+        super(name);  // Calls Parent(String name) constructor
+        this.age = age;
+        System.out.println("Child Constructor Called with age: " + age);
+    }
+
+    void display() {
+        super.display();  // calling parent method
+        System.out.println("Age from Child: " + age);
+    }
+}
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        Child obj = new Child("Amit", 20);
+        obj.display();
+    }
+}
+
+
+// RECURSION BASIC PART 1
+

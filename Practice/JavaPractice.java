@@ -2356,3 +2356,70 @@
 //         cat.makeSound();
 //     }
 // }
+
+
+// class Student {
+//     String name;
+//     int rollNo;
+//     static String schoolName;
+
+//     Student(String name, int rollNo) {
+//         this.name = name;
+//         this.rollNo = rollNo;
+//     }
+
+//     void display() {
+//         System.out.println(name + " - " + rollNo + " - " + schoolName);
+//     }
+// }
+
+// public class JavaPractice {
+//     public static void main(String args[]) {
+//         Student.schoolName = "Ramjas No 5";  // Set static variable using class name
+
+//         Student stu1 = new Student("Aman", 101);
+//         Student stu2 = new Student("Neha", 102);
+
+//         stu1.display();  // Aman - 101 - Ramjas No 5
+//         stu2.display();  // Neha - 102 - Ramjas No 5
+//     }
+// }
+
+
+// class Parent {
+//     String name;
+
+//     // Parameterized constructor
+//     Parent(String name) {
+//         this.name = name;
+//         System.out.println("Parent Constructor Called with name: " + name);
+//     }
+
+//     void display() {
+//         System.out.println("Name from Parent: " + name);
+//     }
+// }
+
+// class Child extends Parent {
+
+//     int age;
+
+//     // Child constructor calling parent constructor using super
+//     Child(String name, int age) {
+//         super(name);  // Calls Parent(String name) constructor
+//         this.age = age;
+//         System.out.println("Child Constructor Called with age: " + age);
+//     }
+
+//     void display() {
+//         super.display();  // calling parent method
+//         System.out.println("Age from Child: " + age);
+//     }
+// }
+
+// public class JavaPractice {
+//     public static void main(String[] args) {
+//         Child obj = new Child("Amit", 20);
+//         obj.display();
+//     }
+// }
