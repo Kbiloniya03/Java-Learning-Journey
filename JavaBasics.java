@@ -3689,5 +3689,425 @@ class BankAccount {
     }
 }
 
-// DEFAULT & PROTECTED
+// GETTERS AND SETTERS WITH THIS KEYWORD
+
+
+public class JavaBasics{
+    public static void main(String[] args) {
+        Student stu = new Student();
+        stu.setName("Kapil");
+        System.out.println("Name = " + stu.getName());
+    }     
+}
+
+
+// Student.java
+class Student {
+    private String name;
+
+    // Setter
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter
+    public String getName() {
+        return name;
+    }
+}
+
+// CONSTRUCTORS
+
+// Example 1.
+
+public class JavaBasics{
+    public static void main(String[] args) {
+        Student stu = new Student();
+    }     
+}
+
+
+// Student.java
+class Student {
+   Student(){
+        System.out.println("Constructor is Called...");
+   }
+}
+
+// Example 2.
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        Student stu = new Student("Kapil", 20);
+    }     
+}
+
+
+// Student.java
+class Student {
+   private String name;
+   private int age;
+
+   Student(String name, int age){
+        this.name = name;
+        this.age = age;
+        System.out.println("Name = " + this.name + " & Age = " + this.age);
+   }
+}
+
+// TYPES OF CONSTRUCTOR
+
+// 1. NON-PARAMETERIZED &  PARAMETERIZED
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        Student stu = new Student();
+        Student stu2 = new Student("Kapil");
+    }     
+}
+
+
+// Student.java
+class Student {
+   String name;
+   int age;
+
+   // 1. Non-Parameterzied 
+   Student(){
+    System.out.println("Construcor is called..");
+   }
+
+   // 2. Parameterzied
+   Student(String name){
+        this.name = name;
+   }
+}
+
+
+
+// 3. COPY CONSTRUCTOR
+
+// Shallow Copy
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        int[] marks = {80, 90, 100};        // original array
+
+        Student stu = new Student("Kapil", 20, marks);  // original object
+        // System.out.println(stu.marks[0]);   // print original
+
+        Student stu2 = new Student(stu);    // shallow copy
+        stu.marks[0] = 85;                  // change original
+        System.out.println(stu2.marks[0]);  // reflects in copy
+    }     
+}
+
+// Student.java
+class Student {
+    String name;         // student name
+    int age;             // student age
+    int[] marks;         // marks array
+
+    Student(String name, int age, int[] marks) {
+        this.name = name;     // assign name
+        this.age = age;       // assign age
+        this.marks = marks;   // assign array
+    }
+
+    Student(Student stu) {
+        this.name = stu.name;     // copy name
+        this.age = stu.age;       // copy age
+        this.marks = stu.marks;   // shallow copy
+    }
+}
+
+// Deep Copy
+
+public class JavaPractice {
+    public static void main(String args[]) {
+        int[] marks = {80, 90, 100};        
+        Student stu = new Student("Kapil", 20, marks);  
+        System.out.println(stu.marks[0]);
+
+        Student stu2 = new Student(stu);    
+        stu.marks[0] = 85;                  
+        System.out.println(stu2.marks[0]);  
+    }     
+}
+
+class Student {
+    String name;
+    int age;
+    int[] marks;
+
+    Student(String name, int age, int[] marks) {
+        this.name = name;
+        this.age = age;
+        this.marks = marks;
+    }
+
+    Student(Student stu) {
+        this.name = stu.name;
+        this.age = stu.age;
+        this.marks = new int[stu.marks.length];
+        for (int i = 0; i < this.marks.length; i++) {
+            this.marks[i] = stu.marks[i];
+        }
+    }
+}
+
+// CONSTRUCTOR OVERLOADING..
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        Student stu = new Student();
+        Student stu2 = new Student("Kapil");
+        Student stu3 = new Student(20);
+
+        System.out.println(stu2.name);
+        System.out.println(stu3.age);
+    }     
+}
+
+
+// Student.java
+class Student {
+   String name;
+   int age;
+
+   // 1. Non-Parameterzied 
+   Student(){
+    System.out.println("Construcor is called..");
+   }
+
+   // 2. Parameterzied
+   Student(String name){
+        this.name = name;
+   }
+
+   Student(int age){
+        this.age = age;
+   }
+}
+
+// INHERITANCE
+
+// Parent class
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Child class
+class Dog extends Animal {
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+public class JavaBasics{
+    public static void main(String args[]) {
+        Dog dog = new Dog();
+        dog.eat();   // Inherited method
+        dog.bark();  // Own method
+    }
+}
+
+// SINGLE LEVEL INHERITS
+
+// Parent class
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Child class
+class Dog extends Animal {
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        Dog dog = new Dog();
+        dog.eat();   // Inherited method
+        dog.bark();  // Own method
+    }
+}
+
+// MULTILEVEL INHERITS
+
+class Animal {
+    void eat() {
+        System.out.println("Eating...");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking...");
+    }
+}
+
+class Puppy extends Dog {
+    void weep() {
+        System.out.println("Weeping...");
+    }
+}
+
+public class JavaPractice {
+    public static void main(String[] args) {
+        Puppy puppy = new Puppy();
+        puppy.eat();   // From Animal
+        puppy.bark();  // From Dog
+        puppy.weep();  // From Puppy
+    }
+}
+
+// HERARCHIAL INHERTANCE
+
+class Animal {
+    void eat() {
+        System.out.println("Animal eats food");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+
+        Cat cat = new Cat();
+        cat.eat();
+        cat.meow();
+    }
+}
+
+// HYBRID INHERITANCE 
+// LEARN INTO INTERFRENCE
+
+// POLYMORPHISM
+
+// METHOD OVERLOADING
+
+class MathOperation {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        MathOperation obj = new MathOperation();
+        System.out.println(obj.add(2, 3));         // 5
+        System.out.println(obj.add(2.5, 3.5));     // 6.0
+        System.out.println(obj.add(1, 2, 3));      // 6
+    }
+}
+
+
+
+// METHOD OVERIDDING
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        Animal a; // reference of parent class
+
+        a = new Dog();  // Dog object
+        a.sound();      // Output: Dog barks
+
+        a = new Cat();  // Cat object
+        a.sound();      // Output: Cat meows
+    }
+}
+
+// ABSTRACTION 
+// ABSTRACT CLASSES
+
+abstract class Animal {
+    Animal() {
+        System.out.println("Animal's Class Constructor");
+    }
+
+    void sleep() {
+        System.out.println("Sleeping...");
+    }
+
+    abstract void makeSound();
+}
+
+class Dog extends Animal{
+    Dog() {
+        System.out.println("Dog's Class Constructor");
+    }
+
+    void makeSound() {
+        System.out.println("Bark Bark...");
+    }
+}
+
+
+class Cat extends Animal{
+    Cat() {
+        System.out.println("Cat's Class Constructor");
+    }
+
+    void makeSound() {
+        System.out.println("Meow Meow...");
+    }
+}
+
+public class JavaBasics{
+    public static void main(String args[]){
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+
+        dog.makeSound();
+        cat.makeSound();
+    }
+}
+
+// INTERFACE
 

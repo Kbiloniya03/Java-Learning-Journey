@@ -2205,17 +2205,154 @@
 // }
 
 
-public class JavaPractice{
-    public static void main(String args[]){
-        BankAccount bankAcc = new BankAccount();
-        bankAcc.showBalance();
-    }
-}
+// public class JavaPractice{
+//     public static void main(String args[]){
+//         BankAccount bankAcc = new BankAccount();
+//         bankAcc.showBalance();
+//     }
+// }
 
-class BankAccount {
-    private int balance = 5000;
+// class BankAccount {
+//     private int balance = 5000;
 
-    public void showBalance(){
-        System.out.println("Balance = " + balance);
-    }
-}
+//     public void showBalance(){
+//         System.out.println("Balance = " + balance);
+//     }
+// }
+
+// public class JavaPractice {
+//     public static void main(String args[]) {
+//         int marks[] = {80, 90, 100};
+//         Student stu = new Student("Kapil", 20, marks);
+//         System.out.println(stu.marks[0]);
+
+//         Student stu2 = new Student(stu);
+//         stu.marks[0] = 85;
+//         System.out.println(stu2.marks[0]);
+//     }     
+// }
+
+
+// // Student.java
+// class Student {
+//    String name;
+//    int age;
+//    int marks[];
+
+//    Student(String name, int age, int marks[]){
+//     this.name = name;
+//     this.age = age;
+//     this.marks = marks;
+//    }
+
+//    Student(Student stu){
+//     this.name = stu.name;
+//     this.age = stu.age;
+//     this.marks = stu.marks;
+//    }
+// }
+
+
+// public class JavaPractice {
+//     public static void main(String args[]) {
+//         int[] marks = {80, 90, 100};        
+//         Student stu = new Student("Kapil", 20, marks);  
+//         System.out.println(stu.marks[0]);
+
+//         Student stu2 = new Student(stu);    
+//         stu.marks[0] = 85;                  
+//         System.out.println(stu2.marks[0]);  
+//     }     
+// }
+
+// class Student {
+//     String name;
+//     int age;
+//     int[] marks;
+
+//     Student(String name, int age, int[] marks) {
+//         this.name = name;
+//         this.age = age;
+//         this.marks = marks;
+//     }
+
+//     Student(Student stu) {
+//         this.name = stu.name;
+//         this.age = stu.age;
+//         this.marks = new int[stu.marks.length];
+//         for (int i = 0; i < this.marks.length; i++) {
+//             this.marks[i] = stu.marks[i];
+//         }
+//     }
+// }
+
+
+// class Animal {
+//     void eat() {
+//         System.out.println("Eating...");
+//     }
+// }
+
+// class Dog extends Animal {
+//     void bark() {
+//         System.out.println("Barking...");
+//     }
+// }
+
+// class Puppy extends Dog {
+//     void weep() {
+//         System.out.println("Weeping...");
+//     }
+// }
+
+// public class JavaPractice {
+//     public static void main(String[] args) {
+//         Puppy puppy = new Puppy();
+//         puppy.eat();   // From Animal
+//         puppy.bark();  // From Dog
+//         puppy.weep();  // From Puppy
+//     }
+// }
+
+// abstract class Animal {
+//     Animal() {
+//         System.out.println("Animal's Class Constructor");
+//     }
+
+//     void sleep() {
+//         System.out.println("Sleeping...");
+//     }
+
+//     abstract void makeSound();
+// }
+
+// class Dog extends Animal{
+//     Dog() {
+//         System.out.println("Dog's Class Constructor");
+//     }
+
+//     void makeSound() {
+//         System.out.println("Bark Bark...");
+//     }
+// }
+
+
+// class Cat extends Animal{
+//     Cat() {
+//         System.out.println("Cat's Class Constructor");
+//     }
+
+//     void makeSound() {
+//         System.out.println("Meow Meow...");
+//     }
+// }
+
+// public class JavaPractice{
+//     public static void main(String args[]){
+//         Dog dog = new Dog();
+//         Cat cat = new Cat();
+
+//         dog.makeSound();
+//         cat.makeSound();
+//     }
+// }
