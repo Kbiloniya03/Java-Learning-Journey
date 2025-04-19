@@ -2460,30 +2460,26 @@
 //     }
 // }
 
-public class JavaPractice {
-    public static void main(String[] args) {
-        int arr[] = {8,3,6,9,5,10,2,5,3};
-        int i = 0;
-        int key = 5;
-        int result = last(arr, key, i);
-
-        if(result == -1){
-            System.out.println(key + " is not found");
-        }
-        else{
-            System.out.println(key + " is at index = " + result);
-        }
+public class JavaPractice{
+    public static void main(String args[]){
+        int x = 2;
+        int n = 10;
+        System.out.println(optPower(x, n));
     }
 
-    public static int last(int arr[], int key, int i){
-        if(i == arr.length){
-            return -1;
+    public static int optPower(int x, int n){
+        if(n == 0){
+            return 1;
         }
 
-        if(arr[i] == key){
-            return i;
-        }
+        int halfPower = optPower(x, n/2);
+        int halfPowerSq = halfPower * halfPower;
 
-        return last(arr, key, i + 1);
+        if(n%2 != 0){
+            halfPowerSq = x * halfPowerSq;
+        }
+        
+
+        return halfPowerSq;
     }
 }
