@@ -4246,3 +4246,178 @@ public class JavaBasics {
 
 // RECURSION BASIC PART 1
 
+// PRINT NUMBER IN DESCENDING ORDER 10 TO 1
+
+public class JavaBasics{
+    public static void printDec(int n){
+        // Base Case
+        if(n == 1){
+            System.out.print(n);
+            return;
+        }
+
+        System.out.print(n + " ");
+
+        // Recursive Case
+        printDec(n - 1);
+    }
+    public static void main(String args[]){
+        int n = 10;
+        printDec(n);
+    }
+}
+
+// PRINT NUMBER IN ASENDING ORDER 1 TO 10
+
+public class JavaBasics{
+    public static void printAsec(int n){
+        // Base Case
+        if(n == 10){
+            System.out.print(n);
+            return;
+        }
+
+        System.out.print(n + " ");
+
+        // Recursive Case
+        printAsec(n + 1);
+    }
+    public static void main(String args[]) {
+        int n = 1;
+        printAsec(n);
+    }
+}
+
+// OR
+
+public class JavaBasics{
+    public static void printAsec(int n){
+        // Base Case
+        if(n == 1){
+            System.out.print(n + " ");
+            return;
+        }
+
+        // Recursive Case
+        printAsec(n - 1);
+
+        System.out.print(n + " ");  
+    }
+    public static void main(String args[]) {
+        int n = 10;
+        printAsec(n);
+    }
+}
+
+// FIND FACTORIAL OF N
+
+public class JavaBasics{
+    public static int factorial(int n){
+        //Base Case
+        if(n == 0){
+            return 1;
+        }
+
+        // Recursive Case
+        int fact = n * factorial(n - 1);
+        return fact;
+    }
+    public static void main(String args[]){
+        int n = 5;
+        System.out.println(factorial(n));
+    }
+}
+
+// FIND SUM OF FIRST N NATURAL NUMBER
+
+public class JavaBasics{
+    public static int sum(int n){
+        //Base Case
+        if(n == 1){
+            return 1;
+        }
+
+        int sum = n + sum(n - 1);
+        return sum;
+    }
+    public static void main(String args[]){
+        int n = 5;
+        System.out.println(sum(n));
+    }
+}
+
+// FIND NTH FIBONACCI NUMBER
+
+public class JavaBasics{
+    public static int fib(int n){
+        if(n == 0) return 0;
+        if(n == 1) return 1;
+
+        int f1 = fib(n - 1); 
+        int f2 = fib(n - 2);
+        return f1 + f2;
+    }
+    public static void main(String args[]){
+        int n = 5;
+        System.out.println(n + " Fibonacci no = " + fib(n));
+    }
+}
+
+// CHECK IF ARRAY IS SORTED OR NOT
+
+public class JavaBasics{
+    public static boolean isSorted(int arr[], int i){
+      if(i == arr.length - 1){
+        return true;
+      }
+
+      if(arr[i] > arr[i + 1]){
+        return false;
+      }
+
+      return isSorted(arr, i + 1);
+
+    }
+    public static void main(String args[]){
+        int arr[] = {1, 2, 3, 4, 5};
+        int i = 0;
+        System.out.println(isSorted(arr, i));
+    }
+}
+
+
+// FIRST OCCURRENCE
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        int arr[] = {8,3,6,9,5,10,2,5,3};
+        int i = 0;
+        int key = 5;
+        int result = first(arr, key, i);
+
+        if(result == -1){
+            System.out.println(key + " is not found");
+        }
+        else{
+            System.out.println(key + " is at index = " + result);
+        }
+    }
+
+    public static int first(int arr[], int key, int i){
+        if(i == arr.length){
+            return -1;
+        }
+
+        if(arr[i] == key){
+            return i;
+        }
+
+        return first(arr, key, i + 1);
+    }
+}
+
+// LAST OCCURRENCE
+
+
+
+// PRINT X TO THE POWER N
