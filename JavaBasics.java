@@ -4535,4 +4535,346 @@ public class JavaBasics{
 // RECURSION PART II
 
 // TILING PROBLEM
- 
+
+public class JavaBasics{
+    public static void main(String args[]){
+        int n = 5;
+        System.out.println("Total number of ways = " + totalWays(n));
+
+    }
+
+    public static int totalWays(int n){
+        // Base Case
+        if(n == 0 || n == 1){
+            return 1;
+        }
+
+        int vertically = totalWays(n - 1);
+        int horizontally = totalWays(n - 2);
+
+        return vertically + horizontally;
+    }
+}
+
+// REMOVE DUPLICATE IN STRING
+
+public class JavaBasics{
+    public static void main(String args[]){
+        String str = "appnnacollege";
+        removeDuplicate(str, 0, new StringBuilder(), new boolean[26]);
+
+    }
+
+    public static void removeDuplicate(String str, int index, StringBuilder sb, boolean map[]){
+        // Base Case
+        if(index == str.length()){
+            System.out.println(sb.toString());
+            return;
+        }
+
+        char currChar = str.charAt(index);
+        if(map[currChar - 'a'] == true){
+            removeDuplicate(str, index + 1, sb, map);
+        }
+        else{
+            map[currChar - 'a'] = true;
+            removeDuplicate(str, index + 1, sb.append(currChar), map);
+        }
+    }
+}
+
+// REVERSE STRING
+
+public class JavaPractice {
+    public static void main(String args[]) {
+        String str = "Kapil";
+        reverseString(str, str.length() - 1, new StringBuilder());
+    }
+
+    public static void reverseString(String str, int i, StringBuilder sb) {
+        if (i < 0) {
+            System.out.println(sb.toString());
+            return;
+        }
+
+        sb.append(str.charAt(i));
+        reverseString(str, i - 1, sb);
+    }
+}
+
+
+// FRIENDS PAIRING PROBLEM
+
+public class JavaPractice {
+    public static int friendPairing(int n) {
+        // Base Cases
+        if (n == 1 || n == 0) return 1;
+        if (n == 2) return 2;
+
+        // Recurrence Relation:
+        // 1. Friend stays single -> friendPairing(n - 1)
+        int staySingle = friendPairing(n - 1);
+
+        // 2. Friend pairs with (n - 1) others -> (n - 1) * friendPairing(n - 2)
+        int pairs = (n - 1) * friendPairing(n - 2);
+        return staySingle + pairs;
+    }
+
+    public static void main(String[] args) {
+        int n = 3;
+        System.out.println(friendPairing(n)); // Output: 4
+    }
+}
+
+// BINARY STRING PROBLEM
+
+// PRACTICE QUESTIONS
+
+// 1. 
+
+public class JavaBasics {
+    public static void main(String argsp[]){
+        int arr[] = {3, 2, 4, 5, 6, 2, 7, 2, 2};
+        int key = 2;
+
+        printIdxOfKey(arr, key, 0);
+    }
+
+    public static void printIdxOfKey(int arr[], int key, int i){
+        if(i == arr.length){
+            return;
+        }
+        
+        if(arr[i] == key){
+            System.out.print(i + " ");
+        } 
+
+        printIdxOfKey(arr, key, i + 1);
+    }
+}
+
+// 2.
+// 3.
+
+public class JavaBasics {
+
+    public static void main(String[] args) {
+        String str = "Kapil";
+        System.out.println("Length of String = " + stringLength(str));
+    }
+
+    public static int stringLength(String str){
+        if(str.equals("")){
+            return 0;
+        }
+
+        int count = stringLength(str.substring(1));
+        return 1 + count;
+    }
+}
+
+// 4.
+// 5.
+
+
+// DIVIDE AND CONQUER
+
+// BINARY SEARCH
+
+public class JavaBasics {
+    public static int binarySearch(int arr[], int target){
+        int start = 0;
+        int end = arr.length- 1;
+
+        while(start <= end){
+            int mid = (start + end)/2;
+
+            if(arr[mid] == target){
+                return mid;
+            } else if(arr[mid] < target){
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+
+        return -1;
+    }
+    public static void main(String args[]){
+        int arr[] = {2, 4, 6, 8, 10, 12, 14};
+        int target = 10;
+        int result = binarySearch(arr, target);
+
+        if(result == -1){
+            System.out.println(target + " Target not found");
+        } else {
+            System.out.println(target + " Target is at Index = " + result);
+        }
+    }
+}
+
+// MERGE 2 SORTED ARRAY 
+
+public class JavaBasics{
+    
+    // Function to print array
+    public static void printArray(int arr[]) {
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    // Function to merge two sorted arrays
+    public static void merge(int arr1[], int arr2[]){
+        int left = arr1.length;
+        int right = arr2.length;
+        int mergeArr[] = new int[left + right];  // Result array
+
+        int i = 0, j = 0, k = 0;
+
+        // Merge elements in sorted order
+        while(i < left && j < right){
+            if(arr1[i] > arr2[j]){
+                mergeArr[k] = arr2[j];
+                j++;
+                k++;
+            } else {
+                mergeArr[k] = arr1[i];
+                i++;
+                k++;
+            }
+        }
+
+        // Add remaining elements from arr1
+        while(i < left){
+            mergeArr[k] = arr1[i];
+            i++;
+            k++;
+        }
+
+        // Add remaining elements from arr2
+        while(j < right){
+            mergeArr[k] = arr2[j];
+            j++;
+            k++;
+        }
+
+        printArray(mergeArr);  // Print merged array
+    }
+
+    public static void main(String args[]){
+        int arr1[] = {3, 6, 9};
+        int arr2[] = {2, 5, 8};
+
+        merge(arr1, arr2);  // Call merge function
+    }
+}
+
+//OR RECURSIVE 
+
+public class JavaBasics {
+
+    // Function to print elements of an array
+    public static void printArray(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    // Recursive function to merge two sorted arrays into mergeArr
+    public static void merge(int arr1[], int arr2[], int mergeArr[], int i, int j, int k) {
+
+        // If all elements from arr1 are added, copy remaining arr2 elements
+        if (i == arr1.length) {
+            while (j < arr2.length) {
+                mergeArr[k] = arr2[j];
+                k++;
+                j++;
+            }
+            return;
+        }
+
+        // If all elements from arr2 are added, copy remaining arr1 elements
+        if (j == arr2.length) {
+            while (i < arr1.length) {
+                mergeArr[k] = arr1[i];
+                k++;
+                i++;
+            }
+            return;
+        }
+
+        // Compare and add smaller element to mergeArr, then move respective pointer
+        if (arr1[i] > arr2[j]) {
+            mergeArr[k] = arr2[j];
+            merge(arr1, arr2, mergeArr, i, j + 1, k + 1);
+        } else {
+            mergeArr[k] = arr1[i];
+            merge(arr1, arr2, mergeArr, i + 1, j, k + 1);
+        }
+    }
+
+    public static void main(String args[]) {
+        int arr1[] = {3, 6, 9};  // First sorted array
+        int arr2[] = {2, 5, 8};  // Second sorted array
+        int mergeArr[] = new int[arr1.length + arr2.length];  // Array to store merged result
+
+        merge(arr1, arr2, mergeArr, 0, 0, 0);  // Start merging from index 0
+        printArray(mergeArr);  // Print the final merged array
+    }
+}
+
+// MERGE SORTING 
+
+
+// QUICK SORTING 
+
+// SORTED AND ROTATED ARRAY SEARCH
+
+public class JavaBasics{
+    public static int search(int arr[], int target) {
+        int start = 0;
+        int end = arr.length - 1;
+    
+        while(start <= end) {
+            int mid = start + (end - start) / 2;
+    
+            if(arr[mid] == target) {
+                return mid; // Found it!
+            }
+    
+            // Left half is sorted
+            if(arr[start] <= arr[mid]) {
+                // Check if target lies in the left half
+                if(arr[start] <= target && target < arr[mid]) {
+                    end = mid - 1;
+                } else {
+                    start = mid + 1;
+                }
+            } 
+            // Right half is sorted
+            else {
+                if(arr[mid] < target && target <= arr[end]) {
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
+                }
+            }
+        }
+        return -1; // Not found
+    }    
+    
+    public static void main(String args[]){
+        int arr[] = {4, 5, 6, 7, 0, 1, 2};
+        int target = 0;
+
+        int index = search(arr, target);
+        if(index == -1){
+            System.out.println("Target is not found");
+        } else {
+            System.out.println("Target is at index of = " + index);
+        }
+    }
+}
+
+// TIME AND SPACE COMPLEXITY

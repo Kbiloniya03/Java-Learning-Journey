@@ -2460,26 +2460,168 @@
 //     }
 // }
 
-public class JavaPractice{
-    public static void main(String args[]){
-        int x = 2;
-        int n = 10;
-        System.out.println(optPower(x, n));
+// public class JavaPractice {
+//     public static int friendPairing(int n) {
+//         // Base Cases
+//         if (n == 1 || n == 0) return 1;
+//         if (n == 2) return 2;
+
+//         // Recurrence Relation:
+//         // 1. Friend stays single -> friendPairing(n - 1)
+//         int staySingle = friendPairing(n - 1);
+
+//         // 2. Friend pairs with (n - 1) others -> (n - 1) * friendPairing(n - 2)
+//         int pairs = (n - 1) * friendPairing(n - 2);
+//         return staySingle + pairs;
+//     }
+
+//     public static void main(String[] args) {
+//         int n = 3;
+//         System.out.println(friendPairing(n)); // Output: 4
+//     }
+// }
+
+
+// public class JavaPractice {
+//     public static void printArray(int arr[]){
+//         for(int i = 0; i < arr.length; i++){
+//             System.out.print(arr[i] + " ");
+//         }
+//     }
+
+//     public static void merge(int arr1[], int arr2[], int mergeArr[], int i, int j, int k){
+//         // Base Case 
+//         if(i == arr1.length){
+//             while (j < arr2.length) {
+//                 mergeArr[k] = arr2[j];
+//                 k++;
+//                 j++;
+//             }
+//             return;
+//         }
+
+//         if(j == arr2.length){
+//             while (i < arr1.length) {
+//                 mergeArr[k] = arr1[i];
+//                 k++;
+//                 i++;
+//             }
+//             return;
+//         }
+
+//         if(arr1[i] > arr2[j]){
+//             mergeArr[k] = arr1[i];
+//             merge(arr1, arr2, mergeArr, i + 1, j, k + 1);
+//         } else {
+//             mergeArr[k] = arr2[j];
+//             merge(arr1, arr2, mergeArr, i, j + 1, k + 1);
+//         }
+//     }
+//     public static void main(String[] args) {
+//         int arr1[] = {9, 6, 3};
+//         int arr2[] = {8, 5, 2};
+
+//         int mergeArr[] = new int[arr1.length + arr2.length];
+//         merge(arr1, arr2, mergeArr, 0, 0, 0);
+
+//         printArray(mergeArr);
+//     }
+// }
+
+// public class JavaPractice{
+//     public static void printArray(int arr[]) {
+//         for(int i = 0; i < arr.length; i++){
+//             System.out.print(arr[i] + " ");
+//         }
+//     }
+
+//     public static void merge(int arr[], int si, int mid, int ei){
+
+//     }
+
+//     public static void mergeSort(int arr[], int si, int ei){
+//         if(si == ei){
+//             return;
+//         }
+
+//         int mid = (si + ei)/2;          // Calculating mid part
+//         mergeSort(arr, si, mid);        // Left part
+//         mergeSort(arr, mid + 1, ei);    // Rigth part
+//         merge(arr, si, mid, ei);        // Calling merge function
+
+//     }
+//     public static void main(String args[]){
+//         int arr[] = {6, 3, 9, 5, 2, 8};
+//         mergeSort(arr, 0, arr.length - 1);
+//         printArray(arr);
+//     }
+// }
+
+// public class JavaPractice{
+//     public static int search(int arr[], int target) {
+//         int start = 0;
+//         int end = arr.length - 1;
+    
+//         while(start <= end) {
+//             int mid = start + (end - start) / 2;
+    
+//             if(arr[mid] == target) {
+//                 return mid; // Found it!
+//             }
+    
+//             // Left half is sorted
+//             if(arr[start] <= arr[mid]) {
+//                 // Check if target lies in the left half
+//                 if(arr[start] <= target && target < arr[mid]) {
+//                     end = mid - 1;
+//                 } else {
+//                     start = mid + 1;
+//                 }
+//             } 
+//             // Right half is sorted
+//             else {
+//                 if(arr[mid] < target && target <= arr[end]) {
+//                     start = mid + 1;
+//                 } else {
+//                     end = mid - 1;
+//                 }
+//             }
+//         }
+//         return -1; // Not found
+//     }    
+    
+//     public static void main(String args[]){
+//         int arr[] = {4, 5, 6, 7, 0, 1, 2};
+//         int target = 0;
+
+//         int index = search(arr, target);
+//         if(index == -1){
+//             System.out.println("Target is not found");
+//         } else {
+//             System.out.println("Target is at index of = " + index);
+//         }
+//     }
+// }
+
+public class JavaPractice {
+
+    public static String reverseWords(String s) {
+        String str[] = s.split(" ");
+        for(int i = 0; i < str.length; i++){
+            for(int j = str.length - 1; j >= 0; j--){
+                String temp = str[j];
+                str[j] = str[i];
+                str[i] = temp;
+            }
+        }
+
+        String result = String.join(" ", str);
+        return result;
     }
 
-    public static int optPower(int x, int n){
-        if(n == 0){
-            return 1;
-        }
+    public static void main(String[] args) {
+        String str = "the sky is blue";
+        System.out.println(reverseWords(str));
 
-        int halfPower = optPower(x, n/2);
-        int halfPowerSq = halfPower * halfPower;
-
-        if(n%2 != 0){
-            halfPowerSq = x * halfPowerSq;
-        }
-        
-
-        return halfPowerSq;
     }
 }
