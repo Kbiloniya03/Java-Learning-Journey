@@ -428,10 +428,10 @@
 // import java.util.*;
 
 // public class JavaPractice{
-//     public static int factorial(int n){
+//     public static int sum(int n){
 
 //         if(n < 0){
-//             System.out.print("For factorial enter postive no !");
+//             System.out.print("For sum enter postive no !");
 //             return -1;
 //         }
 
@@ -447,16 +447,16 @@
 
 //         System.out.print("Enter your number:- ");
 //         int a = sc.nextInt();
-//         int fact = factorial(a);
+//         int fact = sum(a);
 
 //         if(fact != -1){
-//             System.out.println("Factorial of " + a + " is " + fact);
+//             System.out.println("sum of " + a + " is " + fact);
 //         }
 //     }
 // }
 
 // public class JavaPractice{
-//     public static int factorial(int n){
+//     public static int sum(int n){
 //         int fact = 1;
 //         for(int i = 1; i <= n; i++){
 //             fact *= i;
@@ -465,9 +465,9 @@
 //     }
 
 //     public static int binoCoeff(int n, int r){
-//         int fact_n = factorial(n);
-//         int fact_r = factorial(r);
-//         int fact_nmr = factorial(n-r);
+//         int fact_n = sum(n);
+//         int fact_r = sum(r);
+//         int fact_nmr = sum(n-r);
 //         int binoCoeff = fact_n/(fact_r*fact_nmr);
 
 //         return binoCoeff;
@@ -2603,25 +2603,121 @@
 //     }
 // }
 
-public class JavaPractice {
 
-    public static String reverseWords(String s) {
-        String str[] = s.split(" ");
-        for(int i = 0; i < str.length; i++){
-            for(int j = str.length - 1; j >= 0; j--){
-                String temp = str[j];
-                str[j] = str[i];
-                str[i] = temp;
-            }
-        }
 
-        String result = String.join(" ", str);
-        return result;
-    }
+// public class JavaPractice{
+//     public static void printArray(int arr[]){
+//         for(int i = 0; i < arr.length; i++){
+//             System.out.print(arr[i] + " ");
+//         }
+//         System.out.println();
+//     }
+//     public static void modifiedBubbleSort(int arr[]){
+//         for(int i = 0; i < arr.length - 1; i++){
+//             boolean swap = false;
+//             for(int j = 0; j < arr.length - 1 - i; j++){
+//                 if(arr[j] > arr[j + 1]){
+//                     int temp = arr[j + 1];
+//                     arr[j + 1] = arr[j];
+//                     arr[j] = temp;
+//                     swap = true;
+//                 }
+//             }
 
-    public static void main(String[] args) {
-        String str = "the sky is blue";
-        System.out.println(reverseWords(str));
+//             if(swap == false){
+//                 break;
+//             }
+//         }
+//     }
 
-    }
-}
+//     public static int binarySearch(int arr[], int target){
+//         int start = 0;
+//         int end = arr.length - 1;
+
+//         while (start <= end) {
+//             int mid = (end + start)/2;
+
+//             if(arr[mid] ==  target){
+//                 return mid;
+//             }
+
+//             if(arr[mid] > target){
+//                 end = mid - 1;
+//             } else {
+//                 start = mid + 1;
+//             }
+//         }
+
+//         return -1;
+//     }
+
+//     public static void backTracking(int arr[], int i, int j){
+//      if(i == arr.length){
+//         printArray(arr);
+//         return;
+//      }
+
+//      arr[i] = j;
+//      backTracking(arr, i + 1, j + 1);
+//      arr[i] -= 2;
+//     }
+//     public static void main(String args[]){
+//         int arr[] = new int[5];
+//         backTracking(arr, 0, 1);
+//         printArray(arr);
+//     }
+// }
+
+// import java.util.ArrayList;
+
+// public class JavaPractice {
+//     // Function to find if a pair exists with given target sum in a sorted & rotated array
+//     public static boolean pairSum2(ArrayList<Integer> list, int target) {
+//         int n = list.size();
+//         int pivot = -1;
+
+//         // Find the pivot (the point where the next element is smaller)
+//         for (int i = 0; i < n - 1; i++) {
+//             if (list.get(i) > list.get(i + 1)) {
+//                 pivot = i;
+//                 break;
+//             }
+//         }
+
+//         int left = (pivot + 1) % n; // smallest element
+//         int right = pivot;          // largest element
+
+//         // Use two pointers to find if a pair exists
+//         while (left != right) {
+//             int sum = list.get(left) + list.get(right);
+
+//             if (sum == target) {
+//                 return true; // Pair found
+//             }
+
+//             if (sum < target) {
+//                 left = (left + 1) % n; // Move left pointer forward (circular)
+//             } else {
+//                 right = (n + right - 1) % n; // Move right pointer backward (circular)
+//             }
+//         }
+
+//         return false; // No pair found
+//     }
+
+//     public static void main(String args[]) {
+//         ArrayList<Integer> list = new ArrayList<>();
+//         int target = 16;
+
+//         // Add elements to the list (sorted + rotated)
+//         list.add(11);
+//         list.add(15);
+//         list.add(6);
+//         list.add(8);
+//         list.add(9);
+//         list.add(10);
+
+//         // Check for pair sum
+//         System.out.println(pairSum2(list, target)); // Output: true
+//     }
+// }

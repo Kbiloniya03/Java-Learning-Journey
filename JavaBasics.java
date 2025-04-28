@@ -2268,6 +2268,39 @@ public class JavaBasics {
     }
 }
 
+// Bubble Sort Optimized
+
+public class JavaBasics{
+    public static void printArray(int arr[]){
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public static void modifiedBubbleSort(int arr[]){
+        for(int i = 0; i < arr.length - 1; i++){
+            boolean swap = false;
+            for(int j = 0; j < arr.length - 1 - i; j++){
+                if(arr[j] > arr[j + 1]){
+                    int temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                    swap = true;
+                }
+            }
+
+            if(swap == false){
+                break;
+            }
+        }
+    }
+    public static void main(String args[]){
+        int arr[] = {5, 4, 3, 2, 1};
+
+        modifiedBubbleSort(arr);
+        printArray(arr);
+    }
+}
+
 // 2. SELECTION SORT
 
 public class JavaBasics{
@@ -4878,3 +4911,477 @@ public class JavaBasics{
 }
 
 // TIME AND SPACE COMPLEXITY
+
+// BACKTRACKING
+
+// ARRAYLIST
+
+// OPERATION IN ARRAYLIST
+
+import java.util.ArrayList;
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        // Create an ArrayList of Strings
+        ArrayList<String> list = new ArrayList<>();
+
+        // 1. Add Elements
+        list.add("Apple");                // Add at the end
+        list.add("Mango");
+        list.add("Banana");
+        list.add(1, "Orange");             // Insert at index 1
+
+        System.out.println("After adding elements: " + list);
+
+        // 2. Get Element
+        String fruit = list.get(2);        // Get element at index 2
+        System.out.println("Element at index 2: " + fruit);
+
+        // 3. Remove Element
+        list.remove(3);                    // Remove element at index 3 (Banana)
+        list.remove("Apple");              // Remove first occurrence of "Apple"
+
+        System.out.println("After removing elements: " + list);
+
+        // 4. Set Element at Index
+        list.set(1, "Grapes");              // Replace element at index 1 with "Grapes"
+
+        System.out.println("After setting (replacing) element: " + list);
+
+        // 5. Contains Element
+        boolean hasMango = list.contains("Mango");   // Check if "Mango" exists
+        boolean hasApple = list.contains("Apple");   // Check if "Apple" exists
+
+        System.out.println("Contains Mango? " + hasMango);
+        System.out.println("Contains Apple? " + hasApple);
+
+        // 6. Print the final list
+        System.out.println("Final List: " + list);
+    }
+}
+
+// SIZE OF ARRAYLIST
+
+import java.util.ArrayList;
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        // Create an ArrayList of Integer
+        ArrayList<Integer> numbersList = new ArrayList<>();
+
+        // Add elements
+        numbersList.add(1);
+        numbersList.add(2);
+        numbersList.add(3);
+        numbersList.add(4);
+
+        // Print the size of the list
+        System.out.println(numbersList.size());   // Output: 4
+    }
+}
+
+// PRINT REVERSE OF ARRAYLIST
+// [1,2,3,4,5] -> 5, 4, 3, 2, 1
+
+import java.util.ArrayList;
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        // Create an ArrayList of Integer
+        ArrayList<Integer> list = new ArrayList<>();
+
+        // Add elements
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+
+        // Print ArrayList in reverse order
+        for (int i = list.size() - 1; i >= 0; i--) {
+            System.out.print(list.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+
+// FIND LARGEST NO IN AN ARRAYLIST
+// [2, 5, 9, 3, 6] -> 9
+
+import java.util.ArrayList;
+
+public class JavaBasics {
+    public static void main(String[] args) {
+        // Create an ArrayList of Integer
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        // Add elements
+        list.add(2);
+        list.add(5);
+        list.add(9);
+        list.add(3);
+        list.add(6);
+
+        // Largest number (initially set to smallest possible value)
+        int largest = Integer.MIN_VALUE;
+
+        // Loop to find the largest number
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) > largest) {
+                largest = list.get(i);
+            }
+        }
+
+        // Print the largest number
+        System.out.println("Largest No = " + largest);
+    }
+}
+
+// SWAP 2 NO
+// [2, 5, 9, 3, 6] -> [2, 3, 9, 5, 6]
+
+import java.util.ArrayList;
+
+public class JavaBasics {
+
+    // Function to swap two elements in the list
+    public static void swap(ArrayList<Integer> list, int idx1, int idx2) {
+        int temp = list.get(idx1);
+        list.set(idx1, list.get(idx2));
+        list.set(idx2, temp);
+    }
+
+    public static void main(String[] args) {
+        // Create an ArrayList of Integer
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        // Add elements
+        list.add(2);
+        list.add(5);
+        list.add(9);
+        list.add(3);
+        list.add(6);
+        
+        // Indices to swap
+        int idx1 = 1, idx2 = 3;
+
+        // Print list before swapping
+        System.out.println("Before swapping: " + list);
+
+        // Swap elements
+        swap(list, idx1, idx2);
+
+        // Print list after swapping
+        System.out.println("After swapping: " + list);
+    }
+}
+
+
+// SORTING IN ARRAYLIST
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class JavaBasics {
+    public static void main(String args[]) {
+        // Create an ArrayList of Integer
+        ArrayList<Integer> list = new ArrayList<>();
+
+        // Add elements to the ArrayList
+        list.add(4);
+        list.add(5);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
+        // Print the original list
+        System.out.println("Original List: " + list);
+
+        // Sort in Increasing Order (Ascending)
+        Collections.sort(list);
+        System.out.println("Sorted in Increasing Order: " + list);
+
+        // Sort in Decreasing Order (Descending)
+        Collections.sort(list, Collections.reverseOrder());
+        System.out.println("Sorted in Decreasing Order: " + list);
+    }
+}
+
+// MULTI-DIMENSIONAL ARRAYLIST
+/*  [
+    [1, 2, 3, 4, 5]
+    [2, 4, 6, 8, 10]
+    [3, 6, 9, 12, 15]
+]
+*/
+
+import java.util.ArrayList;
+
+public class JavaBasics {
+
+    public static void main(String args[]) {
+        // Create the main list to hold other lists (2D ArrayList)
+        ArrayList<ArrayList<Integer>> mainList = new ArrayList<>();
+
+        // Create individual lists (rows) for 2D structure
+        ArrayList<Integer> list1 = new ArrayList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();
+        ArrayList<Integer> list3 = new ArrayList<>();
+
+        // Add elements to each list (simulating rows in a matrix)
+        for (int i = 1; i <= 5; i++) {
+            list1.add(i * 1);  // Row 1 (multiplying by 1)
+            list2.add(i * 2);  // Row 2 (multiplying by 2)
+            list3.add(i * 3);  // Row 3 (multiplying by 3)
+        }
+
+        // Add the rows (lists) to the main list (2D ArrayList)
+        mainList.add(list1);
+        mainList.add(list2);
+        mainList.add(list3);
+
+        // Print the 2D ArrayList (matrix)
+        for (int i = 0; i < mainList.size(); i++) {
+            ArrayList<Integer> curr = mainList.get(i);  // Get each row (list)
+            for (int j = 0; j < curr.size(); j++) {
+                System.out.print(curr.get(j) + " ");  // Print each element in the row
+            }
+            System.out.println();  // Move to the next line after each row
+        }
+    }
+}
+
+// CONTAINER WITH MOST WATER
+
+// BRUTE FORCE - O(n2)
+import java.util.ArrayList;
+
+public class JavaBasics {
+    public static int mostWater(ArrayList<Integer> height) {
+        int max = 0; // Better to start from 0
+
+        for (int i = 0; i < height.size(); i++) {
+            for (int j = i + 1; j < height.size(); j++) {
+                int minHeight = height.get(i) < height.get(j) ? height.get(i) : height.get(j);
+                int width = j - i;
+                int water = minHeight * width;
+
+                if (water > max) {
+                    max = water;
+                }
+            }
+        }
+
+        return max;
+    }
+
+    public static void main(String args[]) {
+        ArrayList<Integer> height = new ArrayList<>();
+        height.add(1);
+        height.add(8);
+        height.add(6);
+        height.add(2);
+        height.add(5);
+        height.add(4);
+        height.add(8);
+        height.add(3);
+        height.add(7);
+
+        int maxWater = mostWater(height);
+
+        System.out.println(maxWater); // Output: 49
+    }
+}
+
+
+// 2 POINTER APPROACH - O(n)
+
+import java.util.ArrayList;
+
+public class JavaBasics {
+    
+    public static int mostWater(ArrayList<Integer> height) {
+        int max = 0; // Stores maximum water
+        int left = 0; // Start pointer
+        int right = height.size() - 1; // End pointer
+
+        while (left < right) {
+            // Find the minimum height between two lines
+            int minHeight = Math.min(height.get(left), height.get(right));
+
+            // Width between left and right
+            int width = right - left;
+
+            // Calculate area (water contained)
+            int water = minHeight * width;
+
+            // Update max if current water is greater
+            if (water > max) {
+                max = water;
+            }
+
+            // Move the pointer with the shorter height
+            if (height.get(left) < height.get(right)) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return max; // Return the maximum water
+    }
+
+    public static void main(String args[]) {
+        ArrayList<Integer> height = new ArrayList<>();
+
+        // Add heights
+        height.add(1);
+        height.add(8);
+        height.add(6);
+        height.add(2);
+        height.add(5);
+        height.add(4);
+        height.add(8);
+        height.add(3);
+        height.add(7);
+
+        int maxWater = mostWater(height);
+
+        System.out.println(maxWater); // Output: 49
+    }
+}
+
+// PAIR SUM I 
+
+// BRUTE FORCE 
+
+import java.util.ArrayList;
+
+public class JavaBasics {
+    public static boolean pairSum(ArrayList<Integer> list, int target){
+        for(int i = 0; i < list.size(); i++){
+            for(int j = i + 1; j < list.size(); j++){
+                if(list.get(i) + list.get(j) == target){
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public static void main(String args[]) {
+        ArrayList<Integer> list = new ArrayList<>();
+        int target = 5;
+
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
+
+        System.out.println(pairSum(list, target));
+
+    }
+}
+
+// 2 POINTER APPROACH
+
+import java.util.ArrayList;
+
+public class JavaBasics {
+    // Function to find if a pair exists with given target sum
+    public static boolean pairSum(ArrayList<Integer> list, int target) {
+        int left = 0;
+        int right = list.size() - 1;
+
+        while (left < right) {
+            int sum = list.get(left) + list.get(right);
+
+            if (sum == target) {
+                return true; // Pair found
+            }
+
+            if (sum > target) {
+                right--; // Move right pointer leftwards to decrease sum
+            } else {
+                left++; // Move left pointer rightwards to increase sum
+            }
+        }
+
+        return false; // No pair found
+    }
+
+    public static void main(String args[]) {
+        ArrayList<Integer> list = new ArrayList<>();
+        int target = 5;
+
+        // Add elements to the list
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
+
+        // Check for pair sum
+        System.out.println(pairSum(list, target)); // Output: true
+    }
+}
+
+// PAIR SUM II
+
+import java.util.ArrayList;
+
+public class JavaBasics {
+    // Function to find if a pair exists with given target sum in a sorted & rotated array
+    public static boolean pairSum2(ArrayList<Integer> list, int target) {
+        int n = list.size();
+        int pivot = -1;
+
+        // Find the pivot (the point where the next element is smaller)
+        for (int i = 0; i < n - 1; i++) {
+            if (list.get(i) > list.get(i + 1)) {
+                pivot = i;
+                break;
+            }
+        }
+
+        int left = (pivot + 1) % n; // smallest element
+        int right = pivot;          // largest element
+
+        // Use two pointers to find if a pair exists
+        while (left != right) {
+            int sum = list.get(left) + list.get(right);
+
+            if (sum == target) {
+                return true; // Pair found
+            }
+
+            if (sum < target) {
+                left = (left + 1) % n; // Move left pointer forward (circular)
+            } else {
+                right = (n + right - 1) % n; // Move right pointer backward (circular)
+            }
+        }
+
+        return false; // No pair found
+    }
+
+    public static void main(String args[]) {
+        ArrayList<Integer> list = new ArrayList<>();
+        int target = 16;
+
+        // Add elements to the list (sorted + rotated)
+        list.add(11);
+        list.add(15);
+        list.add(6);
+        list.add(8);
+        list.add(9);
+        list.add(10);
+
+        // Check for pair sum
+        System.out.println(pairSum2(list, target)); // Output: true
+    }
+}
